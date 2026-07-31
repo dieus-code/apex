@@ -1,4 +1,4 @@
-import LoginCard from "./components/LoginCard";
+import AuthCard from "./components/AuthCard";
 import GridBackground from "./components/GridBackground";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,7 +12,7 @@ function App() {
         linkTo="/signup"
       />
       <div className="flex min-h-screen items-center justify-center px-4">
-        <LoginCard />
+        <AuthCard />
       </div>
       <Footer/>
     </GridBackground>
