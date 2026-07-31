@@ -112,7 +112,7 @@ function App() {
           </ul>
         </div>
       </section>
-
+<div className='bg-green-400 '><p className='text-blue-400'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, laborum eius quidem, vero quam, aliquid totam officia aspernatur reprehenderit rem ad. Omnis eum maxime, dolorum quibusdam doloremque consequuntur quis modi.</p></div>
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
