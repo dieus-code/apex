@@ -1,4 +1,10 @@
-const GridBackground = ({ children }) => {
+import type { ReactNode } from "react";
+
+type GridBackgroundProps = {
+  children: ReactNode;
+};
+
+const GridBackground = ({ children }: GridBackgroundProps) => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-white">
       {/* Large faint grid */}
