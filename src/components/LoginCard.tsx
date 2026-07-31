@@ -1,4 +1,5 @@
 import { FiUser } from "react-icons/fi";
+import  LoginInputs  from "./inputs";
 
 const LoginCard = () => {
   return (
@@ -32,7 +33,10 @@ const LoginCard = () => {
       <div className="my-5 h-px w-full bg-gray-200" />
 
       {/* Space reserved for the rest of the login form */}
-      <div className="min-h-[250px]" />
+
+      <div >
+        <LoginInputs/>
+        </div>
     </div>
   );
 };
