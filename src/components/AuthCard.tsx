@@ -13,8 +13,7 @@ const AuthCard = ({ children }: AuthCardProps) => {
         <FiUser className="h-5 w-5 text-gray-500" />
       </div>
 
-      {/* Divider */}
-      <div className="mb-5 h-px w-full bg-gray-200" />
+     
 
       {/* Page-specific content */}
       {children}
