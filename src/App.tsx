@@ -1,12 +1,14 @@
-import LoginCard from "./components/LoginCard";
+import AuthCard from "./components/AuthCard";
 import GridBackground from "./components/GridBackground";
 
 function App() {
   return (
     <GridBackground>
-      <div className="flex min-h-screen items-center justify-center px-4">
-        <LoginCard />
-      </div>
+      <main className="flex min-h-screen items-center justify-center p-4">
+        <AuthCard>
+          {/* Page-specific auth content will go here */}
+        </AuthCard>
+      </main>
     </GridBackground>
   );
 }
