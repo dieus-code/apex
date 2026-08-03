@@ -119,13 +119,50 @@ export function LoginInputs(){
               />
             </div>
 
+      
+     {/* password */}
+      <div>
+        <label className="text-xs font-semibold text-slate-600 uppercase tracking-wider">
+              Password
+            </label>
+       <div className="relative flex items-center">
+        {/* React Icon positioned absolutely */}
+        <CiLock className="absolute left-3.5 text-slate-400 text-xl pointer-events-none" />
+
+        {/* Input field with pl-11 to prevent text from overlapping the icon */}
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="••••••••••"
+          className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
+        />
+        <IoEyeOutline className="absolute right-3.5 text-slate-400 text-xl pointer-events-none"  />
+      </div>
+      </div>
+
+          {/* Remember Me */}
+          <div className="flex items-center">
+            <input 
+            type="checkbox"
+              id="remember" 
+              name="remember" 
+              className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer"
+            />
+            <label htmlFor="remember" className="ml-2 text-[10px]  text-slate-600 cursor-pointer select-none">
+              keep me logged in
+            </label>
+             <a href="#" className="ml-35 text-xs font-medium text-indigo-600 hover:text-indigo-500 transition-colors">
+                Forgot password?
+              </a>
+          </div>
+
       <button 
         type="submit" 
         className="w-full bg-indigo-700 py-3 px-4 text-white font-medium text-sm rounded-lg shadow-sm hover:shadow-md"
       >
         Login
       </button>
-      
     </form>
     </>
        );
@@ -191,7 +228,7 @@ const email = ""
           {/* Title & Description */}
           <h2 className="text-2xl font-bold text-slate-800 tracking-tight">Enter verification code</h2>
           <p className="text-sm text-slate-500 mt-2 mb-8 leading-relaxed">
-            We've sent a  code to your {email}. 
+            We've sent a  code to {email}. 
           </p>
         </div>
          {/* Divider */}
@@ -241,7 +278,7 @@ const email = ""
     
         <div className="flex-col justify-center mt-8 text-xs text-slate-500">
           <p className="text-center">
-            experiencing issues receiving the code?{" "}
+            Experiencing issues receiving the code?{" "}
           </p>
           <button
             type="button"
