@@ -7,19 +7,13 @@ import EmailVerificationPage from "./pages/EmailVerificationPage";
 
 function App() {
   return (
-    <GridBackground>
-      <Navbar
-        text="Don't have an account?"
-        linkText="Sign up"
-        linkTo="/signup"
-      />
-      <div className="flex min-h-screen items-center justify-center px-4">
-        <AuthCard >
-          <VerifyInputs/>
-        </AuthCard>
-      </div>
-      <Footer/>
-    </GridBackground>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route path="/verify-email" element={<EmailVerificationPage />} />
+      </Routes>
   );
 }
 
