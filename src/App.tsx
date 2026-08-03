@@ -1,8 +1,9 @@
-import AuthCard from "./components/AuthCard";
-import GridBackground from "./components/GridBackground";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import NewInputs, { LoginInputs, ResetInputs, VerifyInputs } from "./components/inputs";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
+import EmailVerificationPage from "./pages/EmailVerificationPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       />
       <div className="flex min-h-screen items-center justify-center px-4">
         <AuthCard >
-          <LoginInputs/>
+          <VerifyInputs/>
         </AuthCard>
       </div>
       <Footer/>
