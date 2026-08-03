@@ -219,7 +219,7 @@ export function ResetInputs(){
        );
 }
 export function VerifyInputs(){
-const email = ""
+const email = "hello@alignui.com"
   return(
   
       
