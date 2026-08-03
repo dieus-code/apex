@@ -12,19 +12,20 @@ function Navbar({ text, linkText, linkTo }: NavbarProps) {
     <nav className="flex items-center justify-between bg-white px-12 py-5">
       <img
         src={logo}
-        alt="Logo" 
+        alt="Logo"
         className="h-[45px] w-[45px] object-contain"
       />
 
-      <p className="text-[15px] text-gray-500">
-        {text}
+      <div className="flex items-center gap-1 text-[15px] text-gray-500">
+        <span>{text}</span>
+
         <Link
           to={linkTo}
-          className="ml-1 font-semibold text-blue-600 hover:underline"
+          className="font-semibold text-blue-600 hover:underline"
         >
           {linkText}
         </Link>
-      </p>
+      </div>
     </nav>
   );
 }
