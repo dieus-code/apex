@@ -1,24 +1,19 @@
-import AuthCard from "./components/AuthCard";
-import GridBackground from "./components/GridBackground";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import NewInputs, { LoginInputs, ResetInputs, VerifyInputs } from "./components/inputs";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
+import EmailVerificationPage from "./pages/EmailVerificationPage";
 
 function App() {
   return (
-    <GridBackground>
-      <Navbar
-        text="Don't have an account?"
-        linkText="Sign up"
-        linkTo="/signup"
-      />
-      <div className="flex min-h-screen items-center justify-center px-4">
-        <AuthCard >
-          <VerifyInputs/>
-        </AuthCard>
-      </div>
-      <Footer/>
-    </GridBackground>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route path="/verify-email" element={<EmailVerificationPage />} />
+      </Routes>
   );
 }
 
