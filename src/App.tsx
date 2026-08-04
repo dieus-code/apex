@@ -1,39 +1,17 @@
 import { Routes, Route } from "react-router-dom";
-import AuthLayout from "./layout/Authlayout";
-import AuthCard from "./components/AuthCard";
-import  NewInputs, { LoginInputs } from "./components/inputs";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
+import EmailVerificationPage from "./pages/EmailVerificationPage";
 
 function App() {
   return (
     <Routes>
-      <Route element={<AuthLayout />}>
-        <Route
-          path="/"
-          element={
-            <AuthCard>
-              <LoginInputs />
-            </AuthCard>
-          }
-        />
-
-        <Route
-          path="/login"
-          element={
-            <AuthCard>
-              <LoginInputs />
-            </AuthCard>
-          }
-        />
-
-        <Route
-          path="/register"
-          element={
-            <AuthCard>
-              <NewInputs />
-            </AuthCard>
-          }
-        />
-      </Route>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<RegisterPage />} />
+      <Route path="/Forgot Password" element={<ResetPasswordPage />} />
+      <Route path="/verify" element={<EmailVerificationPage />} />
     </Routes>
   );
 }
