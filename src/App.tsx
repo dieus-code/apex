@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import AuthLayout from "./layout/Authlayout";
 import AuthCard from "./components/AuthCard";
-import NewInputs ,{ LoginInputs} from "./components/inputs";
+import  NewInputs, { LoginInputs } from "./components/inputs";
 
 function App() {
   return (
