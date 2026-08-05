@@ -20,9 +20,9 @@ export default function NewInputs(){
 
     <form className="space-y-5 align-items-center justify-center" action="#" method="POST">
         {/* name section */}
-    <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-bold text-black uppercase tracking-wider">
-              Full Name
+    <div className="flex flex-col ">
+            <label className="text-[14px] text-black ">
+            Full Name <span className="text-blue-600">*</span>
             </label>
             <div className="relative flex items-center">
               <RiUser6Line className="absolute left-3.5 text-slate-400 text-lg pointer-events-none" />
@@ -37,8 +37,9 @@ export default function NewInputs(){
             </div>
           </div>
           {/* email section */}
-          <label className="text-xs font-bold text-black uppercase tracking-wider">
-              Email Address
+          
+          <label className="text-[14px] text-black  ">
+              Email Address<span className="text-blue-600">*</span>
             </label>
              <div className="relative flex items-center">
                 
@@ -55,8 +56,8 @@ export default function NewInputs(){
 
      {/* password */}
       <div>
-        <label className="text-xs font-bold text-black uppercase tracking-wider">
-              Password
+        <label className=" text-[14px]  text-black ">
+             Password<span className="text-blue-600">*</span>
             </label>
        <div className="relative flex items-center">
         {/* React Icon positioned absolutely */}
@@ -79,11 +80,11 @@ export default function NewInputs(){
         </div>
        <Button type="submit">Register</Button>
         {/* terms and conditions */}
-        <div  className="flex items-center gap-3 mt- text-xs text-slate-500"> <span><p>By clicking Register, you agree to accept Apex financial's</p ></span></div>
-         <a href="/reset-password" className="text-center text-xs font-medium text-black hover:text-indigo-500 transition-colors underline">
-                <p className="text-center">Forgot password?</p>
+        <div  > <span><p className="text-center text-[#525866] text-[14px] ">By clicking Register, you agree to accept Apex Financial's</p ></span>
+         <a href="/reset-password" className=" text-black hover:text-indigo-500 transition-colors underline">
+                <p className="text-center text-[14px] mt-1">Forgot password?</p>
               </a>
-      
+      </div>
     </form>
     </>
     );
