@@ -13,7 +13,8 @@ const AuthCard = ({ icon, children }: AuthCardProps) => {
         {icon}
       </div>
 
-     
+      {/* Divider */}
+      <div className="mb-5 h-px w-full bg-gray-200" />
 
       {/* Page-specific content */}
       {children}
