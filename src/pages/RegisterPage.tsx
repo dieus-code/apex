@@ -1,4 +1,4 @@
-import { FiUserPlus } from "react-icons/fi";
+import { RiUserAddFill } from "react-icons/ri";
 import AuthCard from "../components/AuthCard";
 import GridBackground from "../components/GridBackground";
 import Navbar from "../components/Navbar";
@@ -16,7 +16,7 @@ const RegisterPage = () => {
 
       <div className="flex min-h-screen items-center justify-center px-4">
         <AuthCard
-          icon={<FiUserPlus className="h-5 w-5 text-gray-500" />}
+          icon={<RiUserAddFill  className="h-5 w-5 text-gray-500" />}
         >
           <NewInputs />
         </AuthCard>
