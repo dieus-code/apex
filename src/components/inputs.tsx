@@ -3,13 +3,15 @@ import { CiLock } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
 import { RiUser6Line } from "react-icons/ri";
-import { RiUserFill } from "react-icons/ri";
+import { RiInformationFill } from "react-icons/ri";
+import Button from "./buttons";
+
 export default function NewInputs(){
     return(
     <>
     {/* header */}
         <div className="text-center mb-8">
-      <h2 className="text-2xl font-bold text-slate-800 tracking-tight">Create a new account</h2>
+      <h1 className="text-2xl font-medium leading-8 text-center text-[#0E121B]">Create a new account</h1>
       <p className="text-sm text-slate-500 mt-1">Enter your details to register</p>
     </div>
 
@@ -18,9 +20,9 @@ export default function NewInputs(){
 
     <form className="space-y-5 align-items-center justify-center" action="#" method="POST">
         {/* name section */}
-    <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-semibold text-slate-600 uppercase tracking-wider">
-              Full Name
+    <div className="flex flex-col ">
+            <label className="text-[14px] text-black ">
+            Full Name <span className="text-blue-600">*</span>
             </label>
             <div className="relative flex items-center">
               <RiUser6Line className="absolute left-3.5 text-slate-400 text-lg pointer-events-none" />
@@ -35,8 +37,9 @@ export default function NewInputs(){
             </div>
           </div>
           {/* email section */}
-          <label className="text-xs font-semibold text-slate-600 uppercase tracking-wider">
-              Email Address
+          
+          <label className="text-[14px] text-black  ">
+              Email Address<span className="text-blue-600">*</span>
             </label>
              <div className="relative flex items-center">
                 
@@ -53,8 +56,8 @@ export default function NewInputs(){
 
      {/* password */}
       <div>
-        <label className="text-xs font-semibold text-slate-600 uppercase tracking-wider">
-              Password
+        <label className=" text-[14px]  text-black ">
+             Password<span className="text-blue-600">*</span>
             </label>
        <div className="relative flex items-center">
         {/* React Icon positioned absolutely */}
@@ -65,7 +68,7 @@ export default function NewInputs(){
           type="password"
           id="password"
           name="password"
-          placeholder="••••••••••"
+         placeholder="• • • • • • • • • •"
           className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
         />
         <IoEyeOutline className="absolute right-3.5 text-slate-400 text-xl pointer-events-none"  />
@@ -73,17 +76,15 @@ export default function NewInputs(){
       
 
  {/* Password Requirements Checklist Line */}
-        <div  className="flex items-center gap-3 mt-1 text-xs text-slate-500"> <span><p>must conatin 1 uppercase letter, 1 lowercase letter,1 number and min. 8characters </p ></span></div>
+        <div  className="text-center flex items-center gap-3 mt-1 text-xs text-slate-500"> <RiInformationFill/><span><p>Must conatin 1 uppercase letter,1 number and min. 8 characters </p ></span></div>
         </div>
-      <button 
-        type="submit" 
-        className="w-full bg-indigo-700 py-3 px-4 text-white font-medium text-sm rounded-lg shadow-sm hover:shadow-md"
-      >
-        Register
-      </button>
+       <Button type="submit">Register</Button>
         {/* terms and conditions */}
-        <div  className="flex items-center gap-3 mt-1 text-xs text-slate-500"> <span><p>By clicking Register, you agree to accept Apex financial's</p ></span></div>
-      
+        <div  > <span><p className="text-center text-[#525866] text-[14px] ">By clicking Register, you agree to accept Apex Financial's</p ></span>
+         <a href="/reset-password" className=" text-black hover:text-indigo-500 transition-colors underline">
+                <p className="text-center text-[14px] mt-1">Forgot password?</p>
+              </a>
+      </div>
     </form>
     </>
     );
@@ -93,7 +94,7 @@ export function LoginInputs(){
     <>
        {/* header */}
         <div className="text-center mb-8">
-      <h2 className="text-2xl font-bold text-slate-800 tracking-tight">Login to your account</h2>
+      <h1  className="text-2xl font-medium leading-8 text-center text-[#0E121B]">Login to your account</h1>
       <p className="text-sm text-slate-500 mt-1">Enter your details to login</p>
     </div>
 
@@ -103,7 +104,7 @@ export function LoginInputs(){
     <form className="space-y-5" action="#" method="POST">
       
           {/* email section */}
-          <label className="text-xs font-semibold text-slate-600 uppercase tracking-wider">
+          <label className="text-xs font-bold text-black uppercase tracking-wider">
               Email Address
             </label>
              <div className="relative flex items-center">
@@ -122,7 +123,7 @@ export function LoginInputs(){
       
      {/* password */}
       <div>
-        <label className="text-xs font-semibold text-slate-600 uppercase tracking-wider">
+        <label className="text-xs font-bold text-black uppercase tracking-wider">
               Password
             </label>
        <div className="relative flex items-center">
@@ -134,7 +135,7 @@ export function LoginInputs(){
           type="password"
           id="password"
           name="password"
-          placeholder="••••••••••"
+          placeholder="• • • • • • • • • •"
           className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
         />
         <IoEyeOutline className="absolute right-3.5 text-slate-400 text-xl pointer-events-none"  />
@@ -152,17 +153,12 @@ export function LoginInputs(){
             <label htmlFor="remember" className="ml-2 text-sm text-slate-600 cursor-pointer select-none">
               keep me logged in
             </label>
-             <a href="/reset-password" className="ml-35 text-xs font-medium text-indigo-600 hover:text-indigo-500 transition-colors">
+             <a href="/reset-password" className="ml-35 text-xs font-medium text-black hover:text-indigo-500 transition-colors underline">
                 Forgot password?
               </a>
           </div>
 
-      <button 
-        type="submit" 
-        className="w-full bg-indigo-700 py-3 px-4 text-white font-medium text-sm rounded-lg shadow-sm hover:shadow-md"
-      >
-        Login
-      </button>
+     <Button type="submit">Login</Button>
     </form>
     </>
        );
@@ -171,18 +167,18 @@ export function ResetInputs(){
        return(
     <>
        {/* header */}
-        <div className="text-center mb-8">
-      <h2 className="text-2xl font-bold text-slate-800 tracking-tight">Reset Password</h2>
-      <p className="text-sm text-slate-500 mt-1">Enter your details to reset your password</p>
+        <div className="text-center mb-5">
+      <h1 className="text-2xl font-medium leading-8 text-center text-[#0E121B]">Reset Password</h1>
+      <p className="text-sm text-slate-500 mt-1">Enter your details to reset your password.</p>
     </div>
 
      {/* Divider */}
-      <div className="mb-5 h-px w-full bg-gray-200" />
+      <div className=" mb-5 h-px w-full bg-gray-200" />
 
     <form className="align-center justify-center flex-col items-center gap-5" action="#" method="POST">
       
           {/* email section */}
-          <label className="text-xs font-semibold text-slate-600 uppercase tracking-wider">
+          <label className="text-[14px]   text-black ">
               Email Address
             </label>
              <div className="relative flex items-center">
@@ -198,18 +194,13 @@ export function ResetInputs(){
               />
             </div>
 
-    <div  className="align-center justify-center flex-col items-center gap-3 mt-1 text-xs text-slate-500">
-      <button 
-        type="submit" 
-        className="w-full bg-indigo-700 py-3 px-4 text-white font-medium text-sm rounded-lg shadow-sm hover:shadow-md mt-2"
-      >
-        Reset Password
-      </button>
-      <div className="items-center mt-2 ml-20">
+    <div  className="align-center justify-center flex-col items-center gap-3 mt-5 text-xs">
+      <Button type="submit">Reset Password</Button>
+      <div className="mt-5">
       
-         <span><p>Don't have access anymore?</p ></span>
+         <span className="text-center"><p>Don't have access anymore?</p ></span>
 
-          <span><a href="#" className="text-indigo-700 font-medium"><p>Try another method</p></a></span>
+          <span className="text-center "><a href="#" className="text-black font-medium underline "><p className="mt-2">Try another method</p></a></span>
           </div>
          </div>
       
@@ -226,7 +217,7 @@ const email = "hello@alignui.com"
         <>
         <div className="text-center mb-8">
           {/* Title & Description */}
-          <h2 className="text-2xl font-bold text-slate-800 tracking-tight">Enter verification code</h2>
+          <h1 className="text-2xl font-medium leading-8 text-center text-[#0E121B]">Enter verification code</h1>
           <p className="text-sm text-slate-500 mt-2 mb-8 leading-relaxed">
             We've sent a  code to {email}. 
           </p>
@@ -280,13 +271,7 @@ const email = "hello@alignui.com"
           <p className="text-center">
             Experiencing issues receiving the code?{" "}
           </p>
-          <button
-            type="button"
-            className="text-indigo-600 font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 align-center justify-center flex-col items-center gap-3 mt-1 text-xs text-slate-500 ml-30"
-          >
-            Resend Code
-            
-          </button>
+           <Button type="submit">Submit code</Button>
         </div>
         </>
         );
