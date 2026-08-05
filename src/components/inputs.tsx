@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 import { CiLock } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
@@ -104,7 +106,7 @@ export function LoginInputs(){
     <form className="space-y-5" action="#" method="POST">
       
           {/* email section */}
-          <label className="text-xs font-bold text-black uppercase tracking-wider">
+          <label className="text-[14px]  text-black ">
               Email Address
             </label>
              <div className="relative flex items-center">
@@ -123,7 +125,7 @@ export function LoginInputs(){
       
      {/* password */}
       <div>
-        <label className="text-xs font-bold text-black uppercase tracking-wider">
+        <label className="text-[14px]  text-black ">
               Password
             </label>
        <div className="relative flex items-center">
@@ -153,9 +155,9 @@ export function LoginInputs(){
             <label htmlFor="remember" className="ml-2 text-sm text-slate-600 cursor-pointer select-none">
               keep me logged in
             </label>
-             <a href="/reset-password" className="ml-35 text-xs font-medium text-black hover:text-indigo-500 transition-colors underline">
+             <Link to ="/reset-password" className="ml-35 text-xs font-medium text-black hover:text-indigo-500 transition-colors underline">
                 Forgot password?
-              </a>
+              </Link>
           </div>
 
      <Button type="submit">Login</Button>

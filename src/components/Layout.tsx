@@ -25,7 +25,7 @@ function Layout({
                 linkText={linkText}
                 linkTo={linkTo} 
             />
-            <main className="flex-1 flex items-center justify-center">
+            <main >
                 {children}
             </main>
             <Footer/>    
