@@ -4,15 +4,15 @@ import GridBackground from "../components/GridBackground";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { VerifyInputs } from "../components/inputs";
+import Layout from "../components/Layout";
 
 const EmailVerificationPage = () => {
   return (
-    <GridBackground>
-      <Navbar
+      <Layout
         text="Back to login?"
         linkText="Login"
         linkTo="/login"
-      />
+      >
 
       <div className="flex min-h-screen items-center justify-center px-4">
         <AuthCard
@@ -21,9 +21,7 @@ const EmailVerificationPage = () => {
           <VerifyInputs />
         </AuthCard>
       </div>
-
-      <Footer />
-    </GridBackground>
+    </Layout>
   );
 };
 
