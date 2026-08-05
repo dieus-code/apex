@@ -149,10 +149,10 @@ export function LoginInputs(){
               name="remember" 
               className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer"
             />
-            <label htmlFor="remember" className="ml-2 text-[10px]  text-slate-600 cursor-pointer select-none">
+            <label htmlFor="remember" className="ml-2 text-sm text-slate-600 cursor-pointer select-none">
               keep me logged in
             </label>
-             <a href="#" className="ml-35 text-xs font-medium text-indigo-600 hover:text-indigo-500 transition-colors">
+             <a href="/reset-password" className="ml-35 text-xs font-medium text-indigo-600 hover:text-indigo-500 transition-colors">
                 Forgot password?
               </a>
           </div>
