@@ -76,7 +76,7 @@ export default function NewInputs(){
       
 
  {/* Password Requirements Checklist Line */}
-        <div  className="text-center flex items-center gap-3 mt-1 text-xs text-slate-500"> <RiInformationFill/><span><p>Must conatin 1 uppercase letter,1 number and min. 8 characters </p ></span></div>
+        <div  className="text-center flex items-center gap-3 mt-1 text-xs text-slate-500"> <RiInformationFill/><span><p>Must contain 1 uppercase letter,1 number and min. 8 characters </p ></span></div>
         </div>
        <Button type="submit">Register</Button>
         {/* terms and conditions */}
@@ -167,7 +167,7 @@ export function ResetInputs(){
        return(
     <>
        {/* header */}
-        <div className="text-center mb-5">
+        <div className="text-center mb-2">
       <h1 className="text-2xl font-medium leading-8 text-center text-[#0E121B]">Reset Password</h1>
       <p className="text-sm text-slate-500 mt-1">Enter your details to reset your password.</p>
     </div>
@@ -257,12 +257,7 @@ const email = "hello@alignui.com"
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            Submit Code
-          </button>
+            <Button type="submit">Submit code</Button>
         </form>
       
 
@@ -271,7 +266,9 @@ const email = "hello@alignui.com"
           <p className="text-center">
             Experiencing issues receiving the code?{" "}
           </p>
-           <Button type="submit">Submit code</Button>
+         <a href="#" className=" text-black hover:text-indigo-500 transition-colors underline">
+                <p className="text-center text-[14px] mt-1">Resend code</p>
+              </a>
         </div>
         </>
         );
