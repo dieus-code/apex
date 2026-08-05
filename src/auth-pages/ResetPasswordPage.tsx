@@ -1,10 +1,10 @@
 import { RiDoorLockFill } from "react-icons/ri";
-import AuthCard from "../components/AuthCard";
-import GridBackground from "../components/GridBackground";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { ResetInputs } from "../components/inputs";
-import Layout from "../components/Layout";
+import AuthCard from "../../components/auth-components/AuthCard";
+import GridBackground from "../../components/auth-components/GridBackground";
+import Navbar from "../../components/auth-components/Navbar";
+import Footer from "../../components/auth-components/Footer";
+import { ResetInputs } from "../../components/auth-components/inputs";
+import Layout from "../../components/auth-components/Layout";
 
 const ResetPasswordPage = () => {
   return (
