@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import ResetPasswordPage from "./pages/ResetPasswordPage";
-import EmailVerificationPage from "./pages/EmailVerificationPage";
+import LoginPage from "./pages/auth-pages/LoginPage";
+import RegisterPage from "./pages/auth-pages/RegisterPage";
+import ResetPasswordPage from "./pages/auth-pages/ResetPasswordPage";
+import EmailVerificationPage from "./pages/auth-pages/EmailVerificationPage";
 
 function App() {
   return (

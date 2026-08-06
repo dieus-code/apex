@@ -1,11 +1,7 @@
 import { RiUserFill } from "react-icons/ri";
-import AuthCard from "../components/AuthCard";
-import GridBackground from "../components/GridBackground";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { LoginInputs } from "../components/inputs";
-import Layout from "../components/Layout";
-
+import AuthCard from "../../components/auth-components/AuthCard";
+import {LoginInputs} from "../../components/auth-components/inputs";
+import Layout from "../../components/auth-components/Layout";
 const LoginPage = () => {
   return (
       <Layout
@@ -15,7 +11,7 @@ const LoginPage = () => {
       >
       <div className="flex min-h-screen items-center justify-center px-4">
         <AuthCard
-          icon={<RiUserFill className="h-5 w-5 text-gray-500" />}
+          icon={<RiUserFill className="h-8 w-8 text-gray-500" />}
         >
           <LoginInputs />
         </AuthCard>
