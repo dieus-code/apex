@@ -4,7 +4,7 @@ import { RiExpandUpDownLine } from "react-icons/ri";
 
 export default function SideBar() {
   return (
-    <div className="h-[900px] w-[272px]  border-r-[1px] border-[E1E4EA] bg-[#FFFFFF]">
+    <div className="h-[900px] w-[272px]  border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
       <div className="flex h-[88px]  w-[272px] gap-3 p-3 flex-wrap">
       <div className="h-[64px] w-[248px] p-3 gap-3 flex flex-row items-center justify-start">
         <img 
@@ -27,10 +27,30 @@ export default function SideBar() {
       {/* sections container */}
       <div className="flex flex-col h-[724px] w-[272px] gap-5 pt-5 pb-4 pr-5 pl-5">
         {/* main section */}
-        <div></div>
-        {/* other section */}
-        <div></div>
+        <div className="h-[268px] w-[232px] gap-2 flex-col flex ">
+            <p className="font-['Inter'] font-medium text-[12px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE] h-[24px]">Main</p>
+            <div>
+              <ul>
+                <li>Dashboard</li>
+                <li>My Cards</li>
+                <li>Transfer</li>
+                <li>Transactions</li>
+                <li>Payments</li>
+                <li>Exchange</li>
+              </ul>
+            </div>
         </div>
+        {/* other section */}
+        <div className="h-[400px] w-[232px] gap-1.5 flex-col flex ">
+            <p className="font-['Inter'] font-medium text-[14px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE]">Other</p>
+            <div>
+              <ul>
+                <li>Settings</li>
+                <li>Support</li>
+              </ul>
+            </div>
+        </div>
+    </div>
     </div>
   );
 }
