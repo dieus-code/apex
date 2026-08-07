@@ -1,7 +1,9 @@
 import DashHeader from "../../components/dashboard-components/DashHeader";
 import avatar from "../../assets/avatar.png";
+import Layout from "../../components/dashboard-components/layout";
 const Dashboard = () => {
     return (
+      <Layout>
        <DashHeader
          avatar={
           <img
@@ -13,6 +15,8 @@ const Dashboard = () => {
         title="Arthur Taylor"
         subtitle="Welcome back to Apex 👋"
         />
+      </Layout>
+      
     );
 }
 export default Dashboard;
