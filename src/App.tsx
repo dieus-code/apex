@@ -10,8 +10,8 @@ function App() {
       <Route path="/" element={<LoginPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<RegisterPage />} />
-      <Route path="/Forgot Password" element={<ResetPasswordPage />} />
-      <Route path="/verify" element={<EmailVerificationPage />} />
+      <Route path="/reset-password" element={<ResetPasswordPage />} />
+      <Route path="/verify-email" element={<EmailVerificationPage />} />
     </Routes>
   );
 }
