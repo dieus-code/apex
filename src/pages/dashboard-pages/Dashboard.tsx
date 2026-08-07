@@ -1,12 +1,12 @@
 import DashHeader from "../../components/dashboard-components/DashHeader";
 import DashboardGrid from "../../components/dashboard-components/DashboardGrid";
 import avatar from "../../assets/avatar.png";
-
+import Layout from "../../components/dashboard-components/layout";
 const Dashboard = () => {
-  return (
-    <div className="p-6 space-y-6">
-      <DashHeader
-        avatar={
+    return (
+      <Layout>
+       <DashHeader
+         avatar={
           <img
             src={avatar}
             alt="Arthur Taylor"
@@ -15,11 +15,9 @@ const Dashboard = () => {
         }
         title="Arthur Taylor"
         subtitle="Welcome back to Apex 👋"
-      />
-
-      <DashboardGrid />
-    </div>
-  );
-};
-
+        />
+      </Layout>
+      
+    );
+}
 export default Dashboard;

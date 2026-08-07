@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/dash-pages/Dashboard";
+import Dashboard from "./pages/dashboard-pages/Dashboard";
 import LoginPage from "./pages/auth-pages/LoginPage";
 import RegisterPage from "./pages/auth-pages/RegisterPage";
 import ResetPasswordPage from "./pages/auth-pages/ResetPasswordPage";
