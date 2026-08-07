@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/Apex_logo.png";
+import logo from "../../assets/logo.png";
 import { RiExpandUpDownLine } from "react-icons/ri";
 
 export default function SideBar() {
@@ -12,12 +12,12 @@ export default function SideBar() {
         alt="Logo"
         className="h-[40px] w-[40px] rounded-full object-contain"
       />
-      <div className="h-[40px] w-[136px] gap-1 flex-col ">
-        <p className="font-['Inter'] font-medium text-[14px] leading-[20px] tracking-[-0.006em] text-[#0E121B)]">Apex</p>
-        <p className="font-['Inter'] font-normal text-[12px] leading-[16px] tracking-[-0.006em]">Finance & Banking </p>
+      <div className="h-10 w-34 gap-1 flex-col ">
+        <p className="font-['Inter'] font-medium text-[14px] leading-5 tracking-[-0.006em] text-[#0E121B)]">Apex</p>
+        <p className="font-['Inter'] font-normal text-[12px] leading-4 tracking-[-0.006em]">Finance & Banking </p>
       </div>
       <button className="flex row justify-center items-center p-0.5 gap-0.5 w-6 h-6 bg-white border border-[#E1E4EA] shadow-[0px_1px_2px_rgba(10,13,20,0.03)] rounded-[6px] flex-none z-[3]">
-  <div className="relative w-5 h-5 flex-none"><RiExpandUpDownLine className = "absolute top-[3.64px] left-[5.69px] w-[8.62px] h-[12.73px] fill-[var(--icon-sub-600,#525866)]"/></div>
+  <div className="relative w-5 h-5 flex items-center justify-center"><RiExpandUpDownLine /></div>
 </button>
       
       </div>

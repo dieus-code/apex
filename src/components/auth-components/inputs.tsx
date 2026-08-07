@@ -88,9 +88,7 @@ export default function NewInputs(){
        <Button type="submit">Register</Button>
         {/* terms and conditions */}
         <div  > <span><p className="text-center text-[#525866] text-[14px] ">By clicking Register, you agree to accept Apex Financial's</p ></span>
-         <a href="/reset-password" className=" text-black hover:text-indigo-500 transition-colors underline">
-                <p className="text-center text-[14px] mt-1">Forgot password?</p>
-              </a>
+         
       </div>
     </form>
     </>
@@ -145,7 +143,7 @@ export function LoginInputs(){
           placeholder="• • • • • • • • • •"
         className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
         />
-        <RiEyeLine className="absolute right-3.5 text-slate-400 text-xl pointer-events-none"  />
+        <RiEyeLine className="absolute right-3.5 text-slate-400 text-xl pointer-events-none mr-2.5"  />
       </div>
       </div>
 
