@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/Apex_logo.png";
+import logo from "../../assets/Apex_logo.png";
 
 interface NavbarProps {
   text: string;

@@ -1,6 +1,8 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 import { CiLock } from "react-icons/ci";
-import { IoEyeOutline } from "react-icons/io5";
+import { RiEyeLine } from "react-icons/ri";
 import { MdMailOutline } from "react-icons/md";
 import { RiUser6Line } from "react-icons/ri";
 import { RiInformationFill } from "react-icons/ri";
@@ -32,7 +34,7 @@ export default function NewInputs(){
                 name="fullName" 
                 required 
                 placeholder="John Brown" 
-                className="w-full pl-11 pr-4 py-2.5 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
+                className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
               />
             </div>
           </div>
@@ -41,18 +43,20 @@ export default function NewInputs(){
           <label className="text-[14px] text-black  ">
               Email Address<span className="text-blue-600">*</span>
             </label>
-             <div className="relative flex items-center">
-                
-              <MdMailOutline className="absolute left-3.5 text-slate-400 text-xl pointer-events-none" />
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
-                placeholder="hello@alignui.com" 
-                className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
-              />
-            </div>
+            <div className="relative flex items-center">
+  {/* Absolute Icon */}
+  <MdMailOutline className="absolute left-3.5 text-[#99A0AE] text-xl pointer-events-none" />
+
+  {/* Email Input */}
+  <input 
+    type="email" 
+    id="email" 
+    name="email" 
+    required 
+    placeholder="hello@alignui.com" 
+    className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+  />
+</div>
 
      {/* password */}
       <div>
@@ -69,14 +73,17 @@ export default function NewInputs(){
           id="password"
           name="password"
          placeholder="• • • • • • • • • •"
-          className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
+           className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
         />
-        <IoEyeOutline className="absolute right-3.5 text-slate-400 text-xl pointer-events-none"  />
+        <RiEyeLine className="absolute right-3.5 text-slate-400 text-xl pointer-events-none mr-2"  />
       </div>
       
 
  {/* Password Requirements Checklist Line */}
-        <div  className="text-center flex items-center gap-3 mt-1 text-xs text-slate-500"> <RiInformationFill/><span><p>Must contain 1 uppercase letter,1 number and min. 8 characters </p ></span></div>
+        <div className="flex items-center gap-1.5 mt-2 text-[12px] leading-[16px] text-[#99A0AE]">
+  <RiInformationFill className="text-sm shrink-0 text-[#99A0AE]" />
+  <p>Must contain 1 uppercase letter, 1 number and min. 8 characters</p>
+</div>
         </div>
        <Button type="submit">Register</Button>
         {/* terms and conditions */}
@@ -104,7 +111,7 @@ export function LoginInputs(){
     <form className="space-y-5" action="#" method="POST">
       
           {/* email section */}
-          <label className="text-xs font-bold text-black uppercase tracking-wider">
+          <label className="text-[14px]  text-black ">
               Email Address
             </label>
              <div className="relative flex items-center">
@@ -116,14 +123,14 @@ export function LoginInputs(){
                 name="email" 
                 required 
                 placeholder="hello@alignui.com" 
-                className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
+                className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
               />
             </div>
 
       
      {/* password */}
       <div>
-        <label className="text-xs font-bold text-black uppercase tracking-wider">
+        <label className="text-[14px]  text-black ">
               Password
             </label>
        <div className="relative flex items-center">
@@ -136,9 +143,9 @@ export function LoginInputs(){
           id="password"
           name="password"
           placeholder="• • • • • • • • • •"
-          className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
+        className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
         />
-        <IoEyeOutline className="absolute right-3.5 text-slate-400 text-xl pointer-events-none"  />
+        <RiEyeLine className="absolute right-3.5 text-slate-400 text-xl pointer-events-none"  />
       </div>
       </div>
 
@@ -153,9 +160,9 @@ export function LoginInputs(){
             <label htmlFor="remember" className="ml-2 text-sm text-slate-600 cursor-pointer select-none">
               keep me logged in
             </label>
-             <a href="/reset-password" className="ml-35 text-xs font-medium text-black hover:text-indigo-500 transition-colors underline">
-                Forgot password?
-              </a>
+             <Link to ="/reset-password" className="text-[#525866] font-['Inter'] font-medium text-[14px]  underline decoration-solid underline-offset-0 ml-35">
+             Forgot password?
+              </Link>
           </div>
 
      <Button type="submit">Login</Button>
@@ -190,7 +197,7 @@ export function ResetInputs(){
                 name="email" 
                 required 
                 placeholder="hello@alignui.com" 
-                className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition duration-150 ease-in-out"
+               className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
               />
             </div>
 
@@ -215,47 +222,49 @@ const email = "hello@alignui.com"
   
       
         <>
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           {/* Title & Description */}
           <h1 className="text-2xl font-medium leading-8 text-center text-[#0E121B]">Enter verification code</h1>
-          <p className="text-sm text-slate-500 mt-2 mb-8 leading-relaxed">
+          <p className="text-sm text-slate-500 mt-2 mb-4 leading-relaxed">
             We've sent a  code to {email}. 
           </p>
         </div>
          {/* Divider */}
       <div className="mb-5 h-px w-full bg-gray-200" />
         <form  className="space-y-6">
-          <div className="flex justify-between gap-2" >
-              {/* input 1 */}
-              <input
-                type="text"
-                inputMode="numeric"
-                maxLength={1}
-                className="w-20 h-14 text-center text-xl font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
-              />
-              {/* input 2 */}
-           <input
-                type="text"
-                inputMode="numeric"
-                maxLength={1}
-                className="w-20 h-14 text-center text-xl font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
-              />
-              {/* input 3 */}
-               <input
-                type="text"
-                inputMode="numeric"
-                maxLength={1}
-                className="w-20 h-14 text-center text-xl font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
-              />
-              {/* input 4 */}
-               <input
-                type="text"
-                inputMode="numeric"
-                maxLength={1}
-                className="w-20 h-14 text-center text-xl font-bold text-slate-800 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
-              />
-          </div>
+         <div className="flex items-center justify-center gap-2 w-[376px]">
+  {/* Input 1 */}
+  <input
+    type="text"
+    inputMode="numeric"
+    maxLength={1}
+    className="w-[86.5px] h-[64px] py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+  />
 
+  {/* Input 2 */}
+  <input
+    type="text"
+    inputMode="numeric"
+    maxLength={1}
+    className="w-[86.5px] h-[64px] py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+  />
+
+  {/* Input 3 */}
+  <input
+    type="text"
+    inputMode="numeric"
+    maxLength={1}
+    className="w-[86.5px] h-[64px] py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+  />
+
+  {/* Input 4 */}
+  <input
+    type="text"
+    inputMode="numeric"
+    maxLength={1}
+    className="w-[86.5px] h-[64px] py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+  />
+</div>
           {/* Submit Button */}
             <Button type="submit">Submit code</Button>
         </form>

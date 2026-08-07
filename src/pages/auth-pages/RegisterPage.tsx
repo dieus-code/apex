@@ -1,10 +1,7 @@
 import { RiUserAddFill } from "react-icons/ri";
-import AuthCard from "../components/AuthCard";
-import GridBackground from "../components/GridBackground";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import NewInputs from "../components/inputs";
-import Layout from "../components/Layout";
+import AuthCard from "../../components/auth-components/AuthCard";
+import NewInputs from "../../components/auth-components/inputs";
+import Layout from "../../components/auth-components/Layout";
 
 const RegisterPage = () => {
   return (
@@ -15,7 +12,7 @@ const RegisterPage = () => {
       >
       <div className="flex min-h-screen items-center justify-center px-4">
         <AuthCard
-          icon={<RiUserAddFill  className="h-5 w-5 text-gray-500" />}
+          icon={<RiUserAddFill  className="h-8 w-8 text-gray-500" />}
         >
           <NewInputs />
         </AuthCard>
