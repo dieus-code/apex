@@ -1,4 +1,5 @@
 import DashHeader from "../../components/dashboard-components/DashHeader";
+import DashboardGrid from "../../components/dashboard-components/DashboardGrid";
 import avatar from "../../assets/avatar.png";
 import Layout from "../../components/dashboard-components/layout";
 const Dashboard = () => {
@@ -11,7 +12,7 @@ const Dashboard = () => {
             alt="Arthur Taylor"
             className="h-full w-full rounded-full object-cover"
           />
-         }
+        }
         title="Arthur Taylor"
         subtitle="Welcome back to Apex 👋"
         />
