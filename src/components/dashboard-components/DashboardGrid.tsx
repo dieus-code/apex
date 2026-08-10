@@ -134,7 +134,7 @@ function DashboardGrid() {
     </button>
   </div>
 
-  <div className="border border-gray-200 bg-[#E1E4EA] mb-4"></div>
+  <div className="border border-gray-200 mb-4"></div>
 
   {/* Action 1 */}
   <div className="flex items-center justify-between py-4">
@@ -366,10 +366,10 @@ function DashboardGrid() {
   </div>
 </DashboardCard>
 
-      {/* Recent Transactions */}
+      {/* Recent Transactions
       <DashboardCard className="col-span-3 min-h-[320px]">
-        {/* Recent Transactions Content */}
-      </DashboardCard>
+        Recent Transactions Content
+      </DashboardCard> */}
     </div>
   );
 }
