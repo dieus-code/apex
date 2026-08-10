@@ -13,7 +13,7 @@ function DashHeader({
   subtitle,
 }: DashHeaderProps) {
   return (
-    <header className="flex h-[88px] items-center justify-between px-8 py-5">
+    <header className="flex w-[1168px] h-[88px] items-center justify-between px-8 py-5">
       {/* Left */}
       <div className="flex items-center gap-[14px]">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C0D5FF]">
