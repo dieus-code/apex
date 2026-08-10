@@ -14,6 +14,7 @@
     "@types/react-router-dom": "^5.3.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-gauge-component": "^2.0.29",
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.11.0",
     "tailwindcss": "^4.3.3"
