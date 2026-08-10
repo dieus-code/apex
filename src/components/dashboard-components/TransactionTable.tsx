@@ -1,6 +1,8 @@
 import TransactionHeader from "./TransactionHeader";
 import TransactionLabels from "./TransactionLabels";
 import TransactionRow from "./TransactionRow";
+import james from "../../assets/james.png";
+import sophia from "../../assets/sophia.png";
 
 function TransactionTable() {
   return (
@@ -22,6 +24,7 @@ function TransactionTable() {
 
         <TransactionRow
           type="avatar"
+          avatar={james}
           name="James Brown"
           amount="-$35.20"
           account="Ops Payroll"
@@ -40,6 +43,7 @@ function TransactionTable() {
 
         <TransactionRow
           type="avatar"
+          avatar={sophia}
           name="Sophia Williams"
           amount="$150.00"
           account="Checking"

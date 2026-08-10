@@ -3,7 +3,7 @@ import DashboardCard from "./DashboardCard";
 function DashboardGrid() {
   return (
     <div className="grid grid-cols-3 gap-6">
-      <DashboardCard className="min-h-[260px]">
+      <DashboardCard className="min-h-[380px]">
         {/* My Card */}
       </DashboardCard>
 
