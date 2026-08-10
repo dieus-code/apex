@@ -14,12 +14,14 @@
     "@types/react-router-dom": "^5.3.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-gauge-component": "^2.0.29",
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.11.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
