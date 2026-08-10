@@ -17,6 +17,7 @@ import { TbWorld } from "react-icons/tb";
 
 interface TransactionRowProps {
   type: "investment" | "avatar" | "stock" | "freelance";
+  avatar?: string;
   name: string;
   amount: string;
   account: string;
@@ -26,6 +27,7 @@ interface TransactionRowProps {
 
 function TransactionRow({
   type,
+  avatar,
   name,
   amount,
   account,
@@ -44,12 +46,15 @@ function TransactionRow({
       {/* Name + Icon */}
       <div className="flex items-center gap-3">
 
-        {/* Avatar Placeholder */}
         {type === "avatar" && (
-          <div className="h-8 w-8 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center text-xs text-slate-500">
-            IMG
-          </div>
-        )}
+  <div className="h-8 w-8 overflow-hidden rounded-full">
+    <img
+      src={avatar}
+      alt={name}
+      className="h-full w-full object-cover"
+    />
+  </div>
+)}
 
         {/* Investment */}
         {type === "investment" && (
