@@ -1,6 +1,14 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import { RiExpandUpDownLine } from "react-icons/ri";
+import { RiLayoutGridLine } from "react-icons/ri";
+import { RiBankCardLine } from "react-icons/ri";
+import { RiArrowLeftRightLine } from "react-icons/ri";
+import { RiHistoryLine } from "react-icons/ri";
+import { RiBillLine } from "react-icons/ri";
+import { RiExchangeLine } from "react-icons/ri";
+import { RiSettings2Line } from "react-icons/ri";
+import { RiHeadphoneLine } from "react-icons/ri";
 
 export default function SideBar() {
   return (
@@ -30,24 +38,24 @@ export default function SideBar() {
         <div className="h-[268px] w-[232px] gap-2 flex-col flex ">
             <p className="font-['Inter'] font-medium text-[12px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE] h-[24px]">Main</p>
             <div>
-              <ul>
-                <li>Dashboard</li>
-                <li>My Cards</li>
-                <li>Transfer</li>
-                <li>Transactions</li>
-                <li>Payments</li>
-                <li>Exchange</li>
-              </ul>
+              
+              <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiLayoutGridLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Dashboard</p></div> 
+              <div className="flex"> <div className="w-5 h-5 flex items-center justify-center" ><RiBankCardLine  /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">My Cards</p></div>
+              <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiArrowLeftRightLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Transfer</p></div>
+              <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiHistoryLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Transactions</p></div>
+              <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiBillLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Payments</p></div>
+              <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiExchangeLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Exchange</p></div>
+              
             </div>
         </div>
         {/* other section */}
         <div className="h-[400px] w-[232px] gap-1.5 flex-col flex ">
             <p className="font-['Inter'] font-medium text-[14px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE]">Other</p>
             <div>
-              <ul>
-                <li>Settings</li>
-                <li>Support</li>
-              </ul>
+              <div>
+                <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiSettings2Line /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Settings</p></div>
+                <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiHeadphoneLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Support</p></div>
+              </div>
             </div>
         </div>
     </div>
