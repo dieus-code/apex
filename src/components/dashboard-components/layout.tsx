@@ -13,9 +13,9 @@ function Layout({
 
     return (
         
-            <div className=" min-h-screen flex">
+            <div className="flex h-screen overflow-hidden">
                 <SideBar/>
-            <main className="flex-1 min-w-0">
+            <main className="flex-1 overflow-y-auto">
                 {children}
             </main>   
         </div>
