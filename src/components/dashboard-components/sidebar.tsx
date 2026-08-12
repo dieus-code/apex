@@ -38,7 +38,7 @@ export default function SideBar() {
         <div className="h-[268px] w-[232px] gap-2 flex-col flex ">
             <p className="font-['Inter'] font-medium text-[12px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE] h-[24px]">Main</p>
             <div>
-              
+               
               <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiLayoutGridLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Dashboard</p></div> 
               <div className="flex"> <div className="w-5 h-5 flex items-center justify-center" ><RiBankCardLine  /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">My Cards</p></div>
               <div className="flex"> <div className="w-5 h-5 flex items-center justify-center"><RiArrowLeftRightLine /></div><p className="text-[14px] font-[inter] font-[medium] leading-5">Transfer</p></div>
