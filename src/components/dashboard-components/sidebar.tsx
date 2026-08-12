@@ -14,7 +14,7 @@ import SideFooter from "./SideFooter";
 
 export default function SideBar() {
   return (
-    <div className="flex h-[900px] w-[272px] flex-col border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
+    <div className="flex h-screen w-[272px] flex-col border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
       <div className="flex h-[88px]  w-[272px] gap-3 p-3 flex-wrap">
         <div className="h-[64px] w-[248px] p-3 gap-3 flex flex-row items-center justify-start">
           <img 
@@ -51,7 +51,7 @@ export default function SideBar() {
             </div>
         </div>
         {/* other section */}
-        <div className="h-[400px] w-[232px] gap-1.5 flex-col flex">
+        <div className="flex w-[232px] flex-col gap-1.5">
             <p className="font-['Inter'] font-medium text-[14px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE]">Other</p>
            <div className="flex flex-col gap-1 h-[236px] w-[232px]">
              

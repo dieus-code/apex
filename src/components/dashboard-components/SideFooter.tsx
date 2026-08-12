@@ -12,6 +12,11 @@ function SideFooter({
   email,
 }: SideFooterProps) {
   return (
+  <div className="w-[272px]">
+    {/* Divider */}
+    <div className="mx-auto h-px w-[232px] bg-[#E1E4EA]" />
+
+    {/* Footer */}
     <div className="flex h-[88px] w-[272px] items-center gap-3 p-3">
       {/* Avatar */}
       <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full">
@@ -34,7 +39,8 @@ function SideFooter({
         <FiChevronRight size={16} />
       </button>
     </div>
-  );
+  </div>
+);
 }
 
 export default SideFooter;
