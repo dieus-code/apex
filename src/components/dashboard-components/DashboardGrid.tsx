@@ -8,114 +8,145 @@ import { RiFlashlightLine } from "react-icons/ri";
 import { PiStudent } from "react-icons/pi";
 import { FiPieChart, FiInfo, FiDollarSign,FiFileText,FiShoppingBag} from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
+import { IoWifiSharp } from "react-icons/io5";
+import { TiTickOutline } from "react-icons/ti";
+
 
 function DashboardGrid() {
   return (
-    <div className="grid grid-cols-3 gap-6">
-      {/* My Cards */}
-      <DashboardCard className="min-h-[260px]">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-3">
-            <AiOutlineCreditCard className="text-2xl text-gray-700" />
-            <h2 className="text-xl font-semibold text-gray-900">
-              My Cards
-            </h2>
-          </div>
+    <div className="grid grid-cols-3 gap-6 ml-[32px] w-full">
+      {/* My Card */}
+<DashboardCard className="min-h-[260px]">
 
-          <button className="flex items-center gap-2 border border-gray-300 rounded-xl px-4 py-2 hover:bg-gray-100 transition">
-            <FiPlus />
-            <span>Add Card</span>
+  {/* My Cards Header */}
+  <div className="flex items-center justify-between mb-5">
+    <div className="flex items-center gap-2 ">
+      <AiOutlineCreditCard className="text-[#525866] w-[18px] h-[16.2px] t-[3.9px] l-[3px]" />
+      <h2 className="text-[16px] text-[#0E121B] leading-[24px] tracking-[-1.1%] w-[72px] h-[24px] font-medium">My Cards</h2>
+    </div>
+
+    <button className="flex items-center gap-2 border border-gray-300 rounded-xl px-4 py-2 hover:bg-gray-100 transition">
+      <FiPlus  className="text-[#525866] w-[10.5] h-[10.5] t-[4.75px] l-[4.75px]"/>
+      <span className="w-[63px] h-[20px] font-medium text-[14px] leading-[20px] tracking-[-0.6%] text-[#525866]">Add Card</span>
+    </button>
+  </div>
+
+  {/* Actual Card */}
+  <div className="relative h-[188px] w-full rounded-[20px] border border-gray-200 bg-white p-6 overflow-hidden">
+
+    {/* Decorative lines */}
+    {/* <div className="absolute right-[-20px] top-[-30px] h-[180px] w-[180px] rounded-[40px] border border-gray-200 rotate-[35deg]"></div> */}
+
+    {/* Top section */}
+    <div className="relative z-10 flex items-center justify-between">
+
+      {/* Left side */}
+      <div className="flex items-center gap-4">
+
+        {/* Apex Logo */}
+        <img
+          src={logo}
+          alt="Apex logo"
+          className="w-[40px] h-[40px] object-contain"
+        />
+
+        {/* Contactless */}
+        <span className="h-[16.2px] w-[20.36px] t-[1.82px] l-[3.9px] text-[#99A0AE] rotate-90">
+          <IoWifiSharp />
+        </span>
+
+        {/* Active button */}
+        <button className="flex items-center gap-[4px] rounded-full border pt-[4px] pl-[4px] pb-[4px] pr-[4px] w-[69px] t-[24px] h-[24px] l-[100px] bg-[#FFFFFF] border-[#E1E4EA]">
+          <span className="flex items-center justify-center w-[12px] h-[12px] t-[2px] l-[2px] rounded-full bg-green-500 text-white">
+            <TiTickOutline />
+          </span>
+          Active
+        </button>
+      </div>
+
+      {/* Mastercard */}
+      {/* <div className="flex items-center">
+        <span className="w-10 h-10 rounded-full bg-red-500"></span>
+        <span className="w-10 h-10 rounded-full bg-orange-400 -ml-4"></span>
+      </div> */}
+    </div>
+
+    {/* Bottom section */}
+    <div className="relative z-10 mt-12">
+
+      <p className="text-[14px] text-[#525866] leading-[20px] tracking-[-0.6%] font-sm w-[87px] h-[20px] t-[106px l-[20px]">
+        Savings Card
+      </p>
+
+      <div className="flex items-end justify-between">
+
+        <h1 className="text-[32px] leading-[40px] tracking-[-0.5%] font-medium text-[#0E121B] mt-[4px] h-[40px] w-[159px] t-[130px] l-[20px] mb-[18px]">
+          $16,058.94
+        </h1>
+
+        {/* Navigation buttons */}
+        <div className="flex rounded-[6px]">
+          <button className="flex items-center justify-center w-[24px] h-[24px] gap-[4px] p-[4px] border bg-[#FFFFFF] border-[#E1E4EA] mb-[16px] rounded-tl-xl rounded-bl-xl">
+            <FiChevronLeft className="text-[#0E121B]"/>
+          </button>
+
+          <button className="flex items-center justify-center w-[24px] h-[24px] gap-[4px] p-[4px] border bg-[#FFFFFF] border-[#E1E4EA] mb-[16px] rounded-tr-xl rounded-br-xl">
+            <FiChevronRight  className=" text-[#0E121B]"/>
           </button>
         </div>
 
-        {/* Card */}
-        <div className="border 1px [#FFFFFF] rounded-2xl p-6 raidus-8 gap-2">
-          {/* Top */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              {/* Card Logo */}
-              <div  className="flex items-center justify-between w-8 h[32px] t [20px] l[20px] object-contain">
-                    <img
-                      src={logo}
-                      alt="Logo"
-                    /></div>
+      </div>
+    </div>
 
-              {/* Active Badge */}
-              <button className="top[24px] left[100px] gap[4px] p-1 border[1px] pt[4px] pr[8px] pl[4px] pb[4px] bg-white-0 rounded-full text-sm font-stroke">
-                Active
-              </button>
-            </div>
+  </div>
 
-            {/* Mastercard */}
-            <div className="text-lg font-bold text-gray-700">
-              Mastercard
-            </div>
-          </div>
+  {/* Tabs */}
+  <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-[full] border-[#E1E4EA] rounded-xl overflow-hidden mt-5">
 
-          {/* Card Name */}
-          <p className="mt-8 text-gray-500">
-            Savings Card
-          </p>
+    <button className="pt-[4px] pr-[12px] pb-[4px] pl-[12px] gap-[4px] bg-[#FFFFFF] border-[#E1E4EA] text-[16px] border-r">
+      <p className="text-[12px] leading-[16px] tracking-[0%] font-medium text-[#525866] align-middle items-center">Daily</p>
+    </button>
 
-          {/* Balance */}
-          <h1 className="text-5xl font-bold text-gray-900 mt-2">
-            $16,058.94
-          </h1>
+    <button className="pt-[4px] pl-[12px] pr-[12px] pb-[4px] bg-[#F5F7FA] border border-[#E1E4EA]">
+      <p className="font-medium leading-[16px] tracking-[0%] text-[12px] text-[#0E121B]">Weekly</p>
+    </button>
 
-          {/* Navigation */}
-          <div className="flex justify-end gap-2 mt-6">
-            <button className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-100">
-              <FiChevronLeft />
-            </button>
+    <button className="pt-[4px] pl-[12px] pr-[12px] pb-[4px] gap-[4px] border bg-[#FFFFFF] border-[#E1E4EA] ">
+      <p className="font-medium leading-[16px] tracking-[0%] text-[12px] text-[#525866]">Monthly</p>
+    </button>
 
-            <button className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-100">
-              <FiChevronRight />
-            </button>
-          </div>
-        </div>
+  </div>
 
-        {/* Tabs */}
-        <div className="grid grid-cols-3 border rounded-xl overflow-hidden mt-6">
-          <button className="py-3 border-r hover:bg-gray-100">
-            Daily
-          </button>
+  {/* Spending Limit */}
+  <div className="flex items-center justify-between mt-5">
 
-          <button className="py-3 border-r bg-gray-50 font-medium">
-            Weekly
-          </button>
+    <div className="flex items-center gap-4">
 
-          <button className="py-3 hover:bg-gray-100">
-            Monthly
-          </button>
-        </div>
+      {/* Gauge */}
+      <div className="w-[48px] h-[48px] rounded-full border-[7px] border-gray-300 border-90-[#335CFF]"></div>
 
-        {/* Spending Limit */}
-        <div className="flex items-center justify-between mt-6 border border-gray-200 rounded-2xl p-4">
-          <div className="flex items-center gap-4">
-            {/* Circle */}
-            <div className="w-14 h-14 rounded-full border-[6px] border-gray-300 border-t-blue-600"></div>
+      <div>
+        <p className="text-[16px] text-gray-500">
+          Spending Limit
+        </p>
 
-            <div>
-              <p className="text-gray-500">
-                Spending Limit
-              </p>
+        <h3 className="text-[24px] font-semibold">
+          $1,500.00
+          <span className="text-[16px] text-gray-400 font-normal">
+            {" "} / week
+          </span>
+        </h3>
+      </div>
 
-              <h3 className="text-2xl font-bold">
-                $1,500.00
-                <span className="text-gray-400 text-base font-normal">
-                  {" "}
-                  / week
-                </span>
-              </h3>
-            </div>
-          </div>
+    </div>
 
-          <button className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-100">
-            <FiChevronRight />
-          </button>
-        </div>
-      </DashboardCard>
+    <button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-xl hover:bg-gray-100">
+      <FiChevronRight />
+    </button>
+
+  </div>
+
+</DashboardCard>
 
       
       {/* Saved Actions */}
@@ -134,7 +165,7 @@ function DashboardGrid() {
     </button>
   </div>
 
-  <div className="border border-gray-200 mb-4"></div>
+  <div className="border border-[#E1E4EA] bg-[#FFFFFF] mb-4"></div>
 
   {/* Action 1 */}
   <div className="flex items-center justify-between py-4">
@@ -254,26 +285,26 @@ function DashboardGrid() {
 </DashboardCard>
 
       {/* Spending Summary */}
-      {/* Spending Summary */}
+      
 <DashboardCard className="min-h-[280px]">
   {/* Header */}
   <div className="flex items-center justify-between border-b border-gray-200 pb-5">
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 mt-[16px]">
       <FiPieChart className="h-6 w-6 text-gray-700" />
 
-      <h2 className="text-xl font-medium text-gray-800">
+      <h2 className="text-16px leading-[24px] tracking-[-1.1%] w-[147px] h-[24px] font-medium text-[#0E121B]">
         Spending Summary
       </h2>
     </div>
 
-    <button className="flex items-center gap-2 rounded-xl border border-gray-200 px-4 py-2 text-base text-gray-700 hover:bg-gray-50">
-      <span>Last Week</span>
-      <span> <IoIosArrowDown/></span>
+    <button className="border rounded-full pt-[6px] pb-[6px] pr-[6px] pl-[10px] gap-[2px] bg-[#FFFFFF] border-[#E1E4EA] flex flex-row h-[32px] w-[106px]">
+      <span className="text-[14px] leading-[20px] tracking-[-0.6%] font-semibold w-[68px] h-[20px] text-[#0E121B]">Last Week</span>
+      <span className="w-[20px] h-[20px]"> <IoIosArrowDown/></span>
     </button>
   </div>
 
   {/* Gauge */}
-  <div className="border-t pt-6">
+  <div className="border-t pt-6 mb-[16px]">
     <GaugeComponent
       type="semicircle"
       value={1800}
@@ -313,11 +344,11 @@ function DashboardGrid() {
         <FiShoppingBag className="h-6 w-6 text-blue-500" />
       </div>
 
-      <p className="text-lg text-gray-600">
+      <p className="text-[#525866] leading-[16px] tracking-[0%] text-[12px] font-semibold w-[57px] h-[16px]">
         Shopping
       </p>
 
-      <p className="mt-1 text-2xl font-medium text-gray-900">
+      <p className="h-[20px] w-[57px] leading-[20px] tracking-[-0.6%]  text-[14px] font-medium text-[#0E121B]">
         $900.00
       </p>
     </div>
@@ -328,11 +359,11 @@ function DashboardGrid() {
         <FiFileText className="h-6 w-6 text-cyan-500" />
       </div>
 
-      <p className="text-lg text-gray-600">
+      <p className="h-[16px] w-[57px] leading-[16px] tracking-[0%] text-[12px] font-medium text-[#525866]">
         Utilities
       </p>
 
-      <p className="mt-1 text-2xl font-medium text-gray-900">
+      <p className="h-[20px] w-[57px] leading-[20px] tracking-[0.6%] text-[14px] font-medium text-[#0E121B]">
         $600.00
       </p>
     </div>
@@ -343,26 +374,26 @@ function DashboardGrid() {
         <FiDollarSign className="h-6 w-6 text-gray-600" />
       </div>
 
-      <p className="text-lg text-gray-600">
+      <p className="h-[16px] w-[57px] leading-[16px] tracking-[0%] text-[12px] font-medium text-[#525866] ">
         Others
       </p>
 
-      <p className="mt-1 text-2xl font-medium text-gray-900">
+      <p className="h-[20px] w-[57px] leading-[20px] tracking-[0.6%] text-[14px] font-medium text-[#0E121B]">
         $200.00
       </p>
     </div>
   </div>
 
   {/* Spending limit message */}
-  <div className="mt-5 flex items-center justify-between rounded-xl border border-gray-200 px-4 py-3">
-    <p className="text-base text-gray-600">
+  <div className="bg-[#FFFFFF] h-[28px] w-full mt-[16px] rounded-full border border-[#E1E4EA] pr-[4px] pt-[6px] pb-[6px] pl-[10px]">
+    <p className="h-[16px] w-[57px] leading-[16px] tracking-[0%] text-[12px] font-medium text-[#525866] whitespace-nowrap">
       Your weekly spending limit is{" "}
-      <span className="font-medium text-gray-800">
+      <span className="h-[20px] w-[57px] leading-[20px] tracking-[0.6%] text-[14px] font-medium text-[#525866]">
         $2000.
       </span>
     </p>
 
-    <FiInfo className="h-5 w-5 text-gray-400" />
+    <FiInfo className="h-4 w-4 text-[#CACFD8] flex-shrink-0" />
   </div>
 </DashboardCard>
 
