@@ -158,7 +158,7 @@ export function LoginInputs(){
             <label htmlFor="remember" className="ml-2 text-sm text-slate-600 cursor-pointer select-none">
               keep me logged in
             </label>
-             <Link to ="/reset-password" className="text-[#525866] font-['Inter'] font-medium text-[14px]  underline decoration-solid underline-offset-0 ml-35">
+             <Link to ="/reset-password" className="text-[#525866] font-['Inter'] text-[14px]  underline decoration-solid underline-offset-0 ml-35">
              Forgot password?
               </Link>
           </div>
