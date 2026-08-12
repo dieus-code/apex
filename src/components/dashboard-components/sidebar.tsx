@@ -51,7 +51,7 @@ export default function SideBar() {
             </div>
         </div>
         {/* other section */}
-        <div className="h-[400px] w-[232px] gap-1.5 flex-col flex">
+        <div className="flex w-[232px] flex-col gap-1.5">
             <p className="font-['Inter'] font-medium text-[14px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE]">Other</p>
             <div>
               <div>

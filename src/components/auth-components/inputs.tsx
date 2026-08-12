@@ -230,13 +230,13 @@ const email = "hello@alignui.com"
          {/* Divider */}
       <div className="mb-5 h-px w-full bg-gray-200" />
         <form  className="space-y-6">
-         <div className="flex items-center justify-center gap-2 w-[376px]">
+         <div className="flex items-center justify-center gap-2 w-94">
   {/* Input 1 */}
   <input
     type="text"
     inputMode="numeric"
     maxLength={1}
-    className="w-[86.5px] h-[64px] py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+    className="w-[86.5px] h-16 py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
   />
 
   {/* Input 2 */}
@@ -244,7 +244,7 @@ const email = "hello@alignui.com"
     type="text"
     inputMode="numeric"
     maxLength={1}
-    className="w-[86.5px] h-[64px] py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+    className="w-[86.5px] h-16 py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
   />
 
   {/* Input 3 */}
@@ -252,7 +252,7 @@ const email = "hello@alignui.com"
     type="text"
     inputMode="numeric"
     maxLength={1}
-    className="w-[86.5px] h-[64px] py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+    className="w-[86.5px] h-16 py-4 px-2 text-center text-xl font-bold text-[#0E121B] bg-[#FFFFFF] border border-[#E1E4EA] rounded-[10px] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
   />
 
   {/* Input 4 */}
