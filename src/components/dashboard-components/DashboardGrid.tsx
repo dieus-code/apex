@@ -123,7 +123,7 @@ function DashboardGrid() {
     <div className="flex items-center gap-4">
 
       {/* Gauge */}
-      <div className="w-[48px] h-[48px] rounded-full border-[7px] border-gray-300 border-90-[#335CFF]"></div>
+      <div className="w-14 h-14 rounded-full border-[7px] border-gray-300 border-r-blue-600 border-t-blue-600"></div>
 
       <div>
         <p className="text-[16px] text-gray-500">
