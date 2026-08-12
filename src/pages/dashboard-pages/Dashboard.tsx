@@ -19,8 +19,10 @@ const Dashboard = () => {
         subtitle="Welcome back to Apex 👋"
         />
         
-        <DashboardGrid/>
-        <TransactionTable/>
+        <div className="px-8 pt-8">
+          <DashboardGrid/>
+          <TransactionTable/>
+        </div>
       </Layout>
       
       
