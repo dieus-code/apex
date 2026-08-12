@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png";
+import avatar from "../../assets/avatar.png";
 import { RiExpandUpDownLine } from "react-icons/ri";
 import { RiLayoutGridLine } from "react-icons/ri";
 import { RiBankCardLine } from "react-icons/ri";
@@ -9,10 +10,11 @@ import { RiBillLine } from "react-icons/ri";
 import { RiExchangeLine } from "react-icons/ri";
 import { RiSettings2Line } from "react-icons/ri";
 import { RiHeadphoneLine } from "react-icons/ri";
+import SideFooter from "./SideFooter";
 
 export default function SideBar() {
   return (
-    <div className="h-[900px] w-[272px]  border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
+    <div className="flex h-screen w-[272px] flex-col border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
       <div className="flex h-[88px]  w-[272px] gap-3 p-3 flex-wrap">
       <div className="h-[64px] w-[248px] p-3 gap-3 flex flex-row items-center justify-start">
         <img 
@@ -33,9 +35,9 @@ export default function SideBar() {
       {/* divider */}
       <div className="h-[1px] w-[272px] bg-[#E1E4EA]"></div>
       {/* sections container */}
-      <div className="flex flex-col h-[724px] w-[272px] gap-5 pt-5 pb-4 pr-5 pl-5">
+      <div className="flex flex-1 flex-col w-[272px] gap-5 px-5 pt-5 pb-4">
         {/* main section */}
-        <div className="h-[268px] w-[232px] gap-2 flex-col flex ">
+        <div className="flex w-[232px] flex-col gap-2">
             <p className="font-['Inter'] font-medium text-[12px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE] h-[24px]">Main</p>
             <div>
                
@@ -49,7 +51,7 @@ export default function SideBar() {
             </div>
         </div>
         {/* other section */}
-        <div className="h-[400px] w-[232px] gap-1.5 flex-col flex ">
+        <div className="h-[400px] w-[232px] gap-1.5 flex-col flex">
             <p className="font-['Inter'] font-medium text-[14px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE]">Other</p>
             <div>
               <div>
@@ -59,6 +61,19 @@ export default function SideBar() {
             </div>
         </div>
     </div>
-    </div>
+  <div className="mt-auto">
+  <SideFooter
+    avatar={
+      <img
+        src={avatar}
+        alt="Arthur Taylor"
+        className="h-full w-full object-cover"
+      />
+    }
+    name="Arthur Taylor"
+    email="arthur@alignui.com"
+  />
+</div>
+</div>
   );
 }
