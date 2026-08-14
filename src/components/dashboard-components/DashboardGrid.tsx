@@ -11,7 +11,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 function DashboardGrid() {
   return (
-    <div className="grid grid-cols-3 gap-6">
+    <div className="grid grid-cols-3 gap-6 max-h-[900px] overflow-y-auto">
       {/* My Cards */}
       <DashboardCard className="min-h-[260px]">
         {/* Header */}
