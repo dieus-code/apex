@@ -1,14 +1,22 @@
 import React from "react";
 import {Link} from "react-router-dom";
-
+import { useState } from "react";
 import { CiLock } from "react-icons/ci";
 import { RiEyeLine } from "react-icons/ri";
+import { RiEyeOffLine } from "react-icons/ri";
 import { MdMailOutline } from "react-icons/md";
 import { RiUser6Line } from "react-icons/ri";
 import { RiInformationFill } from "react-icons/ri";
 import Button from "./buttons";
 
 export default function NewInputs(){
+  // Password input state and toggle (moved here to avoid nested exports)
+  const [showPassword, setShowPassword] = useState(false);
+
+  const toggleVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
+
     return(
     <>
     {/* header */}
@@ -69,13 +77,24 @@ export default function NewInputs(){
 
         {/* Input field with pl-11 to prevent text from overlapping the icon */}
         <input
-          type="password"
+         type={showPassword ? "text" : "password"}
           id="password"
           name="password"
          placeholder="• • • • • • • • • •"
            className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
         />
-        <RiEyeLine className="absolute right-3.5 text-slate-400 text-xl pointer-events-none mr-2"  />
+        <button
+    type="button"
+    onClick={toggleVisibility}
+    className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 focus:outline-none dark:hover:text-gray-300 mr-3"
+    aria-label={showPassword ? "Hide password" : "Show password"}
+  >
+    {showPassword ? (
+      <RiEyeOffLine className="text-xl" aria-hidden="true" />
+    ) : (
+      <RiEyeLine className="text-xl" aria-hidden="true" />
+    )}
+  </button>
       </div>
       
 
@@ -95,6 +114,13 @@ export default function NewInputs(){
     );
 } 
 export function LoginInputs(){
+  // Password input state and toggle (moved here to avoid nested exports)
+  const [showPassword, setShowPassword] = useState(false);
+
+  const toggleVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
+
        return(
     <>
        {/* header */}
@@ -135,20 +161,31 @@ export function LoginInputs(){
         {/* React Icon positioned absolutely */}
         <CiLock className="absolute left-3.5 text-slate-400 text-xl pointer-events-none" />
 
-        {/* Input field with pl-11 to prevent text from overlapping the icon */}
+         {/* Input field with pl-11 to prevent text from overlapping the icon */}
         <input
-          type="password"
+         type={showPassword ? "text" : "password"}
           id="password"
           name="password"
-          placeholder="• • • • • • • • • •"
-        className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
+         placeholder="• • • • • • • • • •"
+           className="w-[376px] h-10 py-[10px] pr-[10px] pl-10 rounded-[10px] bg-[#FFFFFF] border border-[#E1E4EA] text-[#0E121B] placeholder:text-[#99A0AE] shadow-[0px_1px_2px_0px_#0A0D1408] focus:outline-none focus:border-[#335CFF] focus:ring-1 focus:ring-[#335CFF] transition-all"
         />
-        <RiEyeLine className="absolute right-3.5 text-slate-400 text-xl pointer-events-none mr-2.5"  />
+        <button
+    type="button"
+    onClick={toggleVisibility}
+    className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 focus:outline-none dark:hover:text-gray-300 mr-3"
+    aria-label={showPassword ? "Hide password" : "Show password"}
+  >
+    {showPassword ? (
+      <RiEyeOffLine className="text-xl" aria-hidden="true" />
+    ) : (
+      <RiEyeLine className="text-xl" aria-hidden="true" />
+    )}
+  </button>
       </div>
       </div>
 
           {/* Remember Me */}
-          <div className="flex items-center">
+          <div className="flex ">
             <input 
             type="checkbox"
               id="remember" 
@@ -158,7 +195,7 @@ export function LoginInputs(){
             <label htmlFor="remember" className="ml-2 text-sm text-slate-600 cursor-pointer select-none">
               keep me logged in
             </label>
-             <Link to ="/reset-password" className="text-[#525866] font-['Inter'] text-[14px]  underline decoration-solid underline-offset-0 ml-35">
+             <Link to ="/reset-password" className="text-[#525866] font-[Inter] text-[14px]  underline decoration-solid underline-offset-1 ml-30 ">
              Forgot password?
               </Link>
           </div>
@@ -280,7 +317,6 @@ const email = "hello@alignui.com"
         </>
         );
 }
-
 
 
 
