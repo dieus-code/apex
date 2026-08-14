@@ -1,16 +1,16 @@
 import DashboardCard from "./DashboardCard";
 import { AiOutlineCreditCard } from "react-icons/ai";
 import logo from "../../assets/logo.png";
-import { FiPlus,FiHome, FiChevronLeft, FiGift, FiDroplet, FiChevronRight } from "react-icons/fi";
-// import { PiStudent } from "react-icons/pi";
+// import Avatar from "../../assets/Avaatar-girl.png"
+import { FiPlus, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import GaugeComponent from "react-gauge-component";
-import { RiFlashlightLine } from "react-icons/ri";
 import { PiStudent } from "react-icons/pi";
 import { FiPieChart, FiInfo, FiDollarSign,FiFileText,FiShoppingBag} from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoWifiSharp } from "react-icons/io5";
 import { TiTickOutline } from "react-icons/ti";
-
+import { RiHomeSmileFill, RiFireFill ,RiFlashlightLine } from "react-icons/ri";
+import { FaHandHoldingHeart } from "react-icons/fa";
 
 function DashboardGrid() {
   return (
@@ -65,10 +65,10 @@ function DashboardGrid() {
       </div>
 
       {/* Mastercard */}
-      {/* <div className="flex items-center">
-        <span className="w-10 h-10 rounded-full bg-red-500"></span>
-        <span className="w-10 h-10 rounded-full bg-orange-400 -ml-4"></span>
-      </div> */}
+      <div className="flex items-center">
+        <span className=" w-[16.8px] h-[16.8px] t-[7.6px]  l-[2px] rounded-full bg-[#E80B26]"></span>
+        <span className=" w-[16.8px] h-[16.8px] t-[7.6px]  l-[2px] rounded-full bg-[#F59D31] mix-blend-multiply -ml-2"></span>
+      </div>
     </div>
 
     {/* Bottom section */}
@@ -126,22 +126,23 @@ function DashboardGrid() {
       <div className="w-14 h-14 rounded-full border-[7px] border-gray-300 border-r-blue-600 border-t-blue-600"></div>
 
       <div>
-        <p className="text-[16px] text-gray-500">
+        <p className="text-[14px] leading-[20px] tracking-[-0.6%] h-[20px] w-[216px] text-[#525866] font-normal">
           Spending Limit
         </p>
 
-        <h3 className="text-[24px] font-semibold">
-          $1,500.00
-          <span className="text-[16px] text-gray-400 font-normal">
-            {" "} / week
-          </span>
-        </h3>
+    
+        <span className="text-[18px] font-medium leading-[24px] tracking-[-1.5%] w-[84px] h-[24px] text-[#0E121B] flex">
+          $1,500.00{" "}
+          <p className="text-[#99A0AE] text-[12px] leading-[16px] tracking-[0%] font-medium w-[32px] h-[16px]">
+            /week
+          </p>
+        </span>
       </div>
 
     </div>
 
-    <button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-xl hover:bg-gray-100">
-      <FiChevronRight />
+    <button className="flex items-center justify-center w-[24px] h-[24px] border border-[#E1E4EA] p-[2px] bg-[#FFFFFF] gap-[2px] rounded-[6px] hover:bg-gray-100">
+      <FiChevronRight className="text-[#525866]"/>
     </button>
 
   </div>
@@ -171,7 +172,7 @@ function DashboardGrid() {
   <div className="flex items-center justify-between py-4">
     <div className="flex items-center gap-4">
       <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-        <FiHome className="text-green-600 text-xl" />
+        <RiHomeSmileFill className="text-green-600 text-xl" />
       </div>
 
       <div>
@@ -198,6 +199,7 @@ function DashboardGrid() {
   <div className="flex items-center justify-between py-4">
     <div className="flex items-center gap-4">
       <div className="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center">
+        {/* <img src="{Avaatar-girl}" alt="Avatar" className="text-cyan-600 text-xl"/> */}
         <PiStudent className="text-cyan-600 text-xl" />
       </div>
 
@@ -225,7 +227,7 @@ function DashboardGrid() {
   <div className="flex items-center justify-between py-4">
     <div className="flex items-center gap-4">
       <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
-        <FiGift className="text-pink-600 text-xl" />
+        <FaHandHoldingHeart className="text-pink-600 text-xl" />
       </div>
 
       <div>
@@ -252,7 +254,7 @@ function DashboardGrid() {
   <div className="flex items-center justify-between py-4">
     <div className="flex items-center gap-4">
       <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
-        <FiDroplet className="text-red-500 text-xl" />
+        <RiFireFill className="text-red-500 text-xl"/>
       </div>
 
       <div>
@@ -340,8 +342,8 @@ function DashboardGrid() {
   <div className="mt-6 grid grid-cols-3 border-y border-gray-200">
     {/* Shopping */}
     <div className="flex flex-col items-center border-r border-gray-200 py-6">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50">
-        <FiShoppingBag className="h-6 w-6 text-blue-500" />
+      <div className="mb-4 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-[#EBF1FF]">
+        <FiShoppingBag className="h-[20px] w-[20px] text-blue-500" />
       </div>
 
       <p className="text-[#525866] leading-[16px] tracking-[0%] text-[12px] font-semibold w-[57px] h-[16px]">
@@ -355,8 +357,8 @@ function DashboardGrid() {
 
     {/* Utilities */}
     <div className="flex flex-col items-center border-r border-gray-200 py-6">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-50">
-        <FiFileText className="h-6 w-6 text-cyan-500" />
+      <div className="mb-4 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-[#EBF8FF]">
+        <FiFileText className="h-[20px] w-[20px] text-cyan-500" />
       </div>
 
       <p className="h-[16px] w-[57px] leading-[16px] tracking-[0%] text-[12px] font-medium text-[#525866]">
@@ -370,8 +372,8 @@ function DashboardGrid() {
 
     {/* Others */}
     <div className="flex flex-col items-center py-6">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-50">
-        <FiDollarSign className="h-6 w-6 text-gray-600" />
+      <div className="mb-4 flex h-[32px] p-[6px] w-[32px] items-center justify-center rounded-full bg-[#F2F5F8]">
+        <FiDollarSign className="h-[15px] w-[15px] text-[#525866]" />
       </div>
 
       <p className="h-[16px] w-[57px] leading-[16px] tracking-[0%] text-[12px] font-medium text-[#525866] ">
