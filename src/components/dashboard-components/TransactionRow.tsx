@@ -1,19 +1,14 @@
-import {
-  IoEllipsisVertical,
-  IoArrowUp,
-  IoArrowBack,
-} from "react-icons/io5";
+import { IoEllipsisVertical } from "react-icons/io5";
 
 import {
-  HiOutlineBuildingLibrary,
-} from "react-icons/hi2";
-
-import {
-  LuClock3,
-  LuLaptop,
-} from "react-icons/lu";
-
-import { TbWorld } from "react-icons/tb";
+  RiLineChartLine,
+  RiPieChartLine,
+  RiComputerLine,
+  RiGlobalLine,
+  RiArrowRightUpLine,
+  RiArrowLeftDownLine,
+  RiBankLine,
+} from "react-icons/ri";
 
 interface TransactionRowProps {
   type: "investment" | "avatar" | "stock" | "freelance";
@@ -46,34 +41,33 @@ function TransactionRow({
       {/* Name + Icon */}
       <div className="flex items-center gap-3">
 
-        {type === "avatar" && (
-  <div className="h-8 w-8 overflow-hidden rounded-full">
-    <img
-      src={avatar}
-      alt={name}
-      className="h-full w-full object-cover"
-    />
-  </div>
-)}
-
-        {/* Investment */}
-        {type === "investment" && (
-          <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200">
-            <LuClock3 className="text-slate-500 text-sm" />
+        {/* Avatar */}
+        {type === "avatar" ? (
+          <div className="h-8 w-8 overflow-hidden rounded-full">
+            <img
+              src={avatar}
+              alt={name}
+              className="h-full w-full object-cover"
+            />
           </div>
-        )}
-
-        {/* Stock */}
-        {type === "stock" && (
+        ) : (
           <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200">
-            <LuClock3 className="text-slate-500 text-sm" />
-          </div>
-        )}
 
-        {/* Freelance */}
-        {type === "freelance" && (
-          <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200">
-            <LuLaptop className="text-slate-500 text-sm" />
+            {/* Investment Return */}
+            {type === "investment" && (
+              <RiLineChartLine className="h-4 w-4 text-slate-600" />
+            )}
+
+            {/* Stock Dividend */}
+            {type === "stock" && (
+              <RiPieChartLine className="h-4 w-4 text-slate-600" />
+            )}
+
+            {/* Freelance Income */}
+            {type === "freelance" && (
+              <RiComputerLine className="h-4 w-4 text-slate-600" />
+            )}
+
           </div>
         )}
 
@@ -107,17 +101,31 @@ function TransactionRow({
       {/* Payment Method */}
       <div className="flex items-center gap-2">
 
-        {method === "Wire" && (
-          <TbWorld className="text-slate-500" />
-        )}
+        <div className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200">
 
-        {method === "Money Transfer" && (
-          <IoArrowUp className="text-slate-500 rotate-45" />
-        )}
+          {/* Wire */}
+          {method === "Wire" && (
+            <RiGlobalLine className="h-4 w-4 text-slate-600" />
+          )}
 
-        {method === "ACH" && (
-          <HiOutlineBuildingLibrary className="text-slate-500" />
-        )}
+          {/* James Brown - Money Transfer */}
+          {method === "Money Transfer" &&
+            name === "James Brown" && (
+              <RiArrowRightUpLine className="h-4 w-4 text-slate-600" />
+            )}
+
+          {/* Sophia Williams - Money Transfer */}
+          {method === "Money Transfer" &&
+            name === "Sophia Williams" && (
+              <RiArrowLeftDownLine className="h-4 w-4 text-slate-600" />
+            )}
+
+          {/* ACH */}
+          {method === "ACH" && (
+            <RiBankLine className="h-4 w-4 text-slate-600" />
+          )}
+
+        </div>
 
         <span className="text-slate-600">
           {method}

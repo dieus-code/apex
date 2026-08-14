@@ -14,7 +14,7 @@ import SideFooter from "./SideFooter";
 
 export default function SideBar() {
   return (
-    <div className="flex h-screen w-[272px] flex-col border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
+    <div className="flex h-[900px] w-[272px] flex-col border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
       <div className="flex h-[88px]  w-[272px] gap-3 p-3 flex-wrap">
         <div className="h-[64px] w-[248px] p-3 gap-3 flex flex-row items-center justify-start">
           <img 
@@ -35,7 +35,7 @@ export default function SideBar() {
       {/* divider */}
        <div className="ml-5 h-0 w-[232px] border-[#E1E4EA] border-[1px]" />
       {/* sections container */}
-      <div className="flex flex-1 flex-col w-[272px] gap-5 px-5 pt-5 pb-4">
+      <div className="flex flex-1 flex-col w-[272px]  gap-5 px-5 pt-5 pb-4">
         {/* main section */}
         <div className="flex w-[232px] flex-col gap-2">
             <p className="font-['Inter'] font-medium text-[12px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE] h-[24px]">Main</p>
@@ -51,7 +51,7 @@ export default function SideBar() {
             </div>
         </div>
         {/* other section */}
-        <div className="flex w-[232px] flex-col gap-1.5">
+        <div className="h-[400px] w-[232px] gap-1.5 flex-col flex">
             <p className="font-['Inter'] font-medium text-[14px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE]">Other</p>
            <div className="flex flex-col gap-1 h-[236px] w-[232px]">
              
@@ -61,7 +61,7 @@ export default function SideBar() {
             </div>
         </div>
     </div>
-  <div className="mt-auto">
+  <div>
   <SideFooter
     avatar={
       <img
