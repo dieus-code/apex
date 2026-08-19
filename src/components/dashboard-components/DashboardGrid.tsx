@@ -187,7 +187,7 @@ function DashboardGrid() {
     </div>
 
     <div className="flex items-center gap-4">
-      <span className="border pt-0.5 pb-0.5 pr-2 pl-2 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full">
+      <span className="pt-0.5 pb-0.5 pr-2 pl-2 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full">
         $940.00
       </span>
 
@@ -215,7 +215,7 @@ function DashboardGrid() {
     </div>
 
     <div className="flex items-center gap-4">
-      <span className="bg-[#F2F5F8] text-[#717784] px-3 pt-0.5 pr-2 pb-0.5 pl-[8px]font-medium border rounded-full ">
+      <span className="bg-[#F2F5F8] text-[#717784] px-3 pt-0.5 pr-2 pb-0.5 pl-[8px] font-medium rounded-full">
         $750.00
       </span>
 
@@ -242,7 +242,7 @@ function DashboardGrid() {
     </div>
 
     <div className="flex items-center gap-4">
-      <span className="border pt-0.5 pb-0.5 pr-2 pl-2 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full">
+     <span className="pt-0.5 pb-0.5 pr-2 pl-2 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full">
         $100.00
       </span>
 
@@ -269,7 +269,7 @@ function DashboardGrid() {
     </div>
 
     <div className="flex items-center gap-4">
-      <span className="border pt-0.5 pb-0.5 pr-2 pl-2 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full w-full">
+      <span className="pt-0.5 pb-0.5 pr-2 pl-2 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full w-full">
         $20.00
       </span>
 
@@ -277,13 +277,15 @@ function DashboardGrid() {
     </div>
   </div>
 
-  {/* Bottom Button */}
-  <button className="w-full h-fit bg-[#FFFFFF] border border-[#E1E4EA] rounded-full p-2 justify-center gap-1 transition">
-    <div className="w-5 h-5">
-    <span className="w-[10.5px] h-[10.5px] mt-1 ml-[4.75px] text-[#525866]">+</span>
-    </div>
-    <span className="w-31 h-5 leading-5 tracking-[-0.6%] text-[14px] font-medium text-[#525866]">Save a New Action</span>
-  </button>
+ {/* Bottom Button */}
+<button className="w-full h-9 mt-1 bg-[#FFFFFF] border border-[#E1E4EA] rounded-lg p-2 flex items-center justify-center gap-1 opacity-100 transition hover:bg-[#F5F7FA]">
+  <div className="w-5 h-5 flex items-center justify-center opacity-100">
+    <span className="text-[#525866] text-[20px] leading-none">+</span>
+  </div>
+  <span className="w-[132px] h-5 px-1 leading-5 tracking-[-0.6%] text-[14px] font-medium text-[#525866] opacity-100 text-center">
+    Save a New Action
+  </span>
+</button>
 </DashboardCard>
 
       {/* Spending Summary */}
