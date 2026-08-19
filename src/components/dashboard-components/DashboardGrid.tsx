@@ -16,7 +16,7 @@ function DashboardGrid() {
   return (
     <div className="grid grid-cols-3 gap-6 ml-[32px] w-full">
       {/* My Card */}
-<DashboardCard className="min-h-[260px]w-full max-w-md h-auto ">
+<DashboardCard className="min-h-65">
 
   {/* My Cards Header */}
   <div className="flex items-center justify-between mb-5">
@@ -101,7 +101,7 @@ function DashboardGrid() {
   </div>
 
   {/* Tabs */}
-  <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-[full] border-[#E1E4EA] rounded-xl overflow-hidden mt-5">
+  <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-[full] border-[#E1E4EA] rounded-xl overflow-hidden mt-[16px]">
 
     <button className="pt-[4px] pr-[12px] pb-[4px] pl-[12px] gap-[4px] bg-[#FFFFFF] border-[#E1E4EA] text-[16px] border-r">
       <p className="text-[12px] leading-[16px] tracking-[0%] font-medium text-[#525866] align-middle items-center">Daily</p>
@@ -120,7 +120,7 @@ function DashboardGrid() {
   {/* Spending Limit */}
   <div className="flex items-center justify-between mt-5">
 
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 mt-[20px]">
 
       {/* Gauge */}
       <div className="w-14 h-14 rounded-full border-[7px] border-gray-300 border-r-blue-600 border-t-blue-600"></div>
@@ -151,7 +151,7 @@ function DashboardGrid() {
 
       
       {/* Saved Actions */}
-<DashboardCard className="min-h-70">
+<DashboardCard className="min-h-65">
   {/* Header */}
   <div className="flex items-center justify-between mb-6">
     <div className="flex items-center gap-3">
@@ -171,12 +171,12 @@ function DashboardGrid() {
   {/* Action 1 */}
   <div className="flex items-center justify-between py-4">
     <div className="flex items-center gap-4">
-      <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+      <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mt-[16px]">
         <RiHomeSmileFill className="text-green-600 text-xl" />
       </div>
 
       <div>
-        <h3 className="font-semibold text-xl w-[161px] h-[20px] font-bold leading-[20px] tracking-[-0.6%] text-[14px] text-[#0E121B]">
+        <h3 className="font-semibold text-xl w-[161px] h-[20px] font-bold leading-[20px] tracking-[-0.6%] text-[14px] text-[#0E121B] mt-[16px]">
           Rent Payment
         </h3>
 
@@ -292,23 +292,23 @@ function DashboardGrid() {
       
 <DashboardCard className="min-h-[280px]">
   {/* Header */}
-  <div className="flex items-center justify-between border-b border-gray-200 pb-5">
+  <div className="flex items-center justify-between border-b border-gray-200 pb-5]">
     <div className="flex items-center gap-3 mt-[16px]">
-      <FiPieChart className="h-6 w-6 text-gray-700" />
+      <FiPieChart className="h-6 w-6 text-gray-700  mb-[16px]" />
 
-      <h2 className="text-16px leading-[24px] tracking-[-1.1%] w-[147px] h-[24px] font-medium text-[#0E121B]">
+      <h2 className="text-16px leading-[24px] tracking-[-1.1%] w-[147px] h-[24px] font-medium text-[#0E121B] mb-[16px]">
         Spending Summary
       </h2>
     </div>
 
-    <button className="border rounded-full pt-[6px] pb-[6px] pr-[6px] pl-[10px] gap-[2px] bg-[#FFFFFF] border-[#E1E4EA] flex flex-row h-[32px] w-[106px]">
-      <span className="text-[14px] leading-[20px] tracking-[-0.6%] font-semibold w-[68px] h-[20px] text-[#0E121B]">Last Week</span>
-      <span className="w-[20px] h-[20px]"> <IoIosArrowDown/></span>
+    <button className="border rounded-full pt-[6px] pb-[6px] pr-[6px] pl-[10px] gap-[2px] bg-[#FFFFFF] border-[#E1E4EA] flex flex-row h-[32px] w-[106px] whitespace-nowrap mb-[16px]">
+      <span className="text-[14px] leading-[20px] tracking-[-0.6%] font-normal w-[68px] h-[20px] text-[#0E121B]">Last Week</span>
+      <span className="w-[20px] h-[20px] mt-0.5 text-[#525866]"> <IoIosArrowDown/></span>
     </button>
   </div>
 
   {/* Gauge */}
-  <div className="border-t pt-6 mb-[16px]">
+  <div className="border-t pt-6 mb-[16px] border-[#E1E4EA]">
     <GaugeComponent
       type="semicircle"
       value={1800}
@@ -323,6 +323,9 @@ function DashboardGrid() {
             fontWeight: "700",
           },
         },
+        tickLabels:{
+          hideMinMax:true,
+        }
       }}
       arc={{
         colorArray: ["#4F46E5", "#06B6D4", "#E5E7EB"],
@@ -389,16 +392,16 @@ function DashboardGrid() {
   </div>
 
   {/* Spending limit message */}
-  <div className="bg-[#FFFFFF] h-[28px] w-full mt-[16px] rounded-full border border-[#E1E4EA] pr-[4px] pt-[6px] pb-[6px] pl-[10px]">
-    <p className="h-[16px] w-[57px] leading-[16px] tracking-[0%] text-[12px] font-medium text-[#525866] whitespace-nowrap">
-      Your weekly spending limit is{" "}
-      <span className="h-[20px] w-[57px] leading-[20px] tracking-[0.6%] text-[14px] font-medium text-[#525866]">
-        $2000.
-      </span>
-    </p>
+ <div className="bg-[#FFFFFF] h-[28px] w-full mt-[16px] rounded-[6px] border border-[#E1E4EA] px-[10px] flex items-center justify-between">
+  <p className="leading-[16px] tracking-[0%] text-[12px] font-medium text-[#525866] whitespace-nowrap">
+    Your weekly spending limit is{" "}
+    <span className="leading-[20px] tracking-[0.6%] text-[14px] font-medium text-[#525866]">
+      $2000.
+    </span>
+  </p>
 
-    <FiInfo className="h-4 w-4 text-[#CACFD8] flex-shrink-0" />
-  </div>
+  <FiInfo className="h-4 w-4 text-[#CACFD8] flex-shrink-0" />
+</div>
 </DashboardCard>
 
       {/* Recent Transactions
