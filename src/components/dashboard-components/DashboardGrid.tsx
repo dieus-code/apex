@@ -16,7 +16,7 @@ function DashboardGrid() {
   return (
     <div className="grid grid-cols-3 gap-6 ml-[32px] w-full">
       {/* My Card */}
-<DashboardCard className="min-h-[260px]">
+<DashboardCard className="min-h-[260px]w-full max-w-md h-auto ">
 
   {/* My Cards Header */}
   <div className="flex items-center justify-between mb-5">
