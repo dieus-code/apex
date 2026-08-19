@@ -101,7 +101,7 @@ function DashboardGrid() {
   </div>
 
   {/* Tabs */}
-  <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-[full] border-[#E1E4EA] rounded-xl overflow-hidden mt-5">
+  <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-[full] border-[#E1E4EA] rounded-xl overflow-hidden mt-[16px]">
 
     <button className="pt-[4px] pr-[12px] pb-[4px] pl-[12px] gap-[4px] bg-[#FFFFFF] border-[#E1E4EA] text-[16px] border-r">
       <p className="text-[12px] leading-[16px] tracking-[0%] font-medium text-[#525866] align-middle items-center">Daily</p>
@@ -120,7 +120,7 @@ function DashboardGrid() {
   {/* Spending Limit */}
   <div className="flex items-center justify-between mt-5">
 
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 mt-[20px]">
 
       {/* Gauge */}
       <div className="w-14 h-14 rounded-full border-[7px] border-gray-300 border-r-blue-600 border-t-blue-600"></div>
@@ -306,7 +306,7 @@ function DashboardGrid() {
   </div>
 
   {/* Gauge */}
-  <div className="border-t pt-6 mb-[16px]">
+  <div className="border-t pt-6 mb-[16px] border-[#E1E4EA]">
     <GaugeComponent
       type="semicircle"
       value={1800}
