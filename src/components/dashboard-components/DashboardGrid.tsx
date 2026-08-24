@@ -48,8 +48,8 @@ function DashboardGrid() {
           </button>
         </div>
 
-        {/* Actual Card */}
-        <div className="relative h-[188px] w-full rounded-[20px] border border-gray-200 bg-white p-5 overflow-hidden">
+  {/* Actual Card */}
+  <div className="h-[188px] w-[320px] rounded-[16px] border border-[#E1E4EA] bg-white overflow-hidden mt-[16px] mr-[16px]">
 
           {/* Decorative lines */}
           {/* <div className="absolute right-[-20px] top-[-30px] h-[180px] w-[180px] rounded-[40px] border border-gray-200 rotate-[35deg]"></div> */}
@@ -64,16 +64,16 @@ function DashboardGrid() {
               <img
                 src={logo}
                 alt="Apex logo"
-                className="w-[40px] h-[40px] object-contain"
+                className="w-[40px] h-[40px] object-contain ml-[20px] mt-[20px]"
               />
 
               {/* Contactless */}
-              <span className="h-[16.2px] w-[20.36px] t-[1.82px] l-[3.9px] text-[#99A0AE] rotate-90">
+              <span className="h-[16.2px] w-[20.36px] t-[1.82px] l-[3.9px] text-[#99A0AE] rotate-90  ml-[8px] mt-[20px]">
                 <IoWifiSharp />
               </span>
 
               {/* Active button */}
-              <button className="flex items-center gap-[4px] rounded-full border pt-[4px] pl-[4px] pb-[4px] pr-[4px] w-[69px] h-[24px] bg-[#FFFFFF] border-[#E1E4EA]">
+              <button className="flex items-center gap-[4px] rounded-full border pt-[4px] pl-[4px] pb-[4px] pr-[4px] w-[69px] h-[24px] bg-[#FFFFFF] border-[#E1E4EA]  ml-[16px] mt-[20px]">
                 <span className="flex items-center justify-center w-[12px] h-[12px] t-[2px] l-[2px] rounded-full bg-green-500 text-white">
                   <TiTickOutline />
                 </span>
@@ -83,7 +83,7 @@ function DashboardGrid() {
             </div>
 
             {/* Mastercard */}
-            <div className="flex items-center">
+            <div className="flex items-center  mr-[20px] mt-[20px]">
               <span className="w-[16.8px] h-[16.8px] t-[7.6px] l-[2px] rounded-full bg-[#E80B26]"></span>
 
               <span className="w-[16.8px] h-[16.8px] t-[7.6px] l-[2px] rounded-full bg-[#F59D31] mix-blend-multiply -ml-2"></span>
@@ -93,18 +93,18 @@ function DashboardGrid() {
           {/* Bottom section */}
           <div className="relative z-10 mt-10">
 
-            <p className="text-[14px] text-[#525866] leading-[20px] tracking-[-0.6%] font-sm w-[87px] h-[20px]">
+            <p className="text-[14px] text-[#525866] leading-[20px] tracking-[-0.6%] font-sm w-[87px] h-[20px]  ml-[20px] mt-[58px]">
               Savings Card
             </p>
 
             <div className="flex items-end justify-between">
 
-              <h1 className="text-[32px] leading-[40px] tracking-[-0.5%] font-medium text-[#0E121B] mt-[4px] h-[40px] w-[159px] mb-[18px]">
+              <h1 className="text-[32px] leading-[40px] tracking-[-0.5%] font-medium text-[#0E121B] mt-[4px] h-[40px] w-[159px] mb-[18px]  ml-[20px]">
                 $16,058.94
               </h1>
 
               {/* Navigation buttons */}
-              <div className="flex rounded-[6px]">
+              <div className="flex rounded-[6px] mr-[16px] mb-[16px]">
 
                 <button className="flex items-center justify-center w-[24px] h-[24px] gap-[4px] p-[4px] border bg-[#FFFFFF] border-[#E1E4EA] mb-[16px] rounded-tl-xl rounded-bl-xl">
                   <FiChevronLeft className="text-[#0E121B]" />
@@ -120,7 +120,7 @@ function DashboardGrid() {
         </div>
 
         {/* Tabs */}
-        <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-full border-[#E1E4EA] overflow-hidden mt-[16px]">
+        <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-full border-[#E1E4EA] overflow-hidden mt-[16px] mr-[16px]">
 
           <button className="pt-[4px] pr-[12px] pb-[4px] pl-[12px] gap-[4px] bg-[#FFFFFF] border-[#E1E4EA] text-[16px] border-r">
             <p className="text-[12px] leading-[16px] tracking-[0%] font-medium text-[#525866] align-middle items-center">
@@ -151,7 +151,7 @@ function DashboardGrid() {
             <div className="w-14 h-14 rounded-full border-[7px] border-gray-300 border-r-blue-600 border-t-blue-600"></div>
 
             <div>
-              <p className="text-[14px] leading-[20px] tracking-[-0.6%] h-[20px] w-[216px] text-[#525866] font-normal">
+              <p className="text-[14px] leading-[20px] tracking-[-0.6%] h-[20px] w-[216px] text-[#525866] font-normal  ml-[16px] mt-[20px]">
                 Spending Limit
               </p>
 
