@@ -2,7 +2,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 function TransactionHeader() {
   return (
-    <div className="flex items-start justify-between px-6 py-5">
+    <div className="flex h-[76px] w-full items-start justify-between px-6 py-5">
       {/* Left Side */}
       <div>
         <div className="flex items-center gap-2">
@@ -15,7 +15,7 @@ function TransactionHeader() {
           </h2>
         </div>
 
-        <p className="mt-1 ml-9 text-xs text-slate-400">
+        <p className="ml-9 mt-1 text-xs text-slate-400">
           Display the recent transactions in the table below.
         </p>
       </div>
@@ -24,7 +24,7 @@ function TransactionHeader() {
       <div className="flex items-center gap-3">
         {/* Search Box */}
         <div className="relative">
-          <IoSearchOutline className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm" />
+          <IoSearchOutline className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400" />
 
           <input
             type="text"
@@ -48,3 +48,4 @@ function TransactionHeader() {
 }
 
 export default TransactionHeader;
+

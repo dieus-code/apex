@@ -6,8 +6,7 @@ import sophia from "../../assets/sophia.png";
 
 function TransactionTable() {
   return (
-    <div className="mt-6">
-
+    <div className="mt-6 h-[332px] w-[1104px] overflow-hidden">
       <TransactionHeader />
 
       <TransactionLabels />
@@ -60,9 +59,9 @@ function TransactionTable() {
           method="ACH"
         />
       </div>
-
     </div>
   );
 }
 
 export default TransactionTable;
+
