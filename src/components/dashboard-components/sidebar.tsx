@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../../assets/logo.png";
 import avatar from "../../assets/avatar.png";
 import { RiExpandUpDownLine } from "react-icons/ri";
@@ -11,8 +11,57 @@ import { RiExchangeLine } from "react-icons/ri";
 import { RiSettings2Line } from "react-icons/ri";
 import { RiHeadphoneLine } from "react-icons/ri";
 import SideFooter from "./SideFooter";
+import { Link } from "react-router-dom";
+import { FiChevronRight } from "react-icons/fi";
 
 export default function SideBar() {
+  const [activeItem, setActiveItem] = useState("Dashboard");
+
+  const navItem = (
+    label: string,
+    icon: React.ReactNode
+  ) => {
+    const isActive = activeItem === label;
+
+    return (
+      <Link
+        to="#"
+        onClick={() => setActiveItem(label)}
+        className={`group relative flex h-[36px] w-full items-center rounded-[8px] px-3 py-2 transition-colors
+          ${
+            isActive
+              ? "bg-[#F1F5F9] text-[#0E121B]"
+              : "text-[#525866] hover:bg-[#F6F8FA]"
+          }
+        `}
+      >
+        {/* Active blue indicator */}
+        {isActive && (
+          <span className="absolute -left-5 top-1/2 h-[20px] w-[4px] -translate-y-1/2 bg-[#335CFF] opacity-100 rounded-tr-[4px] rounded-br-[4px]" />
+        )}
+
+        {/* Icon */}
+        <div
+          className={`mr-2 flex h-5 w-5 shrink-0 items-center justify-center ${
+            isActive ? "text-[#335CFF]" : "text-[#525866]"
+          }`}
+        >
+          {icon}
+        </div>
+
+        {/* Text and arrow */}
+        <div className="flex flex-1 items-center justify-between">
+          <p className="truncate text-[14px] font-medium leading-5">
+            {label}
+          </p>
+          {isActive && (
+            <FiChevronRight className="text-gray-500 text-lg" />
+          )}
+        </div>
+      </Link>
+    );
+  };
+
   return (
     <div className="flex h-screen w-[272px] flex-col border-r-[1px] border-[#E1E4EA] bg-[#FFFFFF]">
       <div className="flex h-[88px]  w-[272px] gap-3 p-3 flex-wrap">
@@ -41,12 +90,14 @@ export default function SideBar() {
             <p className="font-['Inter'] font-medium text-[12px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE] h-[24px]">Main</p>
             <div className="flex flex-col gap-1 h-[236px] w-[232px]">
                
-              <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2"><RiLayoutGridLine /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">Dashboard</p></div> 
-              <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2" ><RiBankCardLine  /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">My Cards</p></div>
-              <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2"><RiArrowLeftRightLine /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">Transfer</p></div>
-              <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2"><RiHistoryLine /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">Transactions</p></div>
-              <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2"><RiBillLine /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">Payments</p></div>
-              <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2"><RiExchangeLine /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">Exchange</p></div>
+              <div className="flex flex-col gap-1">
+            {navItem("Dashboard", <RiLayoutGridLine />)}
+            {navItem("My Cards", <RiBankCardLine />)}
+            {navItem("Transfer", <RiArrowLeftRightLine />)}
+            {navItem("Transactions", <RiHistoryLine />)}
+            {navItem("Payments", <RiBillLine />)}
+            {navItem("Exchange", <RiExchangeLine />)}
+          </div>
               
             </div>
         </div>
@@ -54,11 +105,9 @@ export default function SideBar() {
         <div className="h-[400px] w-[232px] gap-1.5 flex-col flex">
             <p className="font-['Inter'] font-medium text-[14px] uppercase leading-[16px] tracking-[-0.006em] text-[#99A0AE]">Other</p>
            <div className="flex flex-col gap-1 h-[236px] w-[232px]">
-             
-                 <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2"><RiSettings2Line /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">Settings</p></div>
-                <div className="flex  pt-2 pb-2 pl-3 pr-3 rounded-2 h-[36px] w-[232px]"> <div className="w-5 h-5 flex items-center justify-center mr-2"><RiHeadphoneLine /></div><p className="text-[14px] font-[inter] text-[#0E121B] leading-5">Support</p></div>
-              
-            </div>
+            {navItem("Settings", <RiSettings2Line />)}
+            {navItem("Support", <RiHeadphoneLine />)}
+           </div>
         </div>
     </div>
   <div>
