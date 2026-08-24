@@ -11,7 +11,7 @@ function DashboardCard({
 }: DashboardCardProps) {
   return (
     <div
-      className={`rounded-xl border border-gray-200 bg-white p-5 shadow-sm ${className}`}
+      className={` w-[352px] h-[380px] rounded-xl border border-gray-200 bg-white p-5 shadow-sm ${className}`}
     >
       {children}
     </div>

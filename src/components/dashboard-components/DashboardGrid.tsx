@@ -154,7 +154,7 @@ function DashboardGrid() {
 <DashboardCard className="flex flex-col">
   {/* Header */}
   <div className="flex items-center justify-between mb-6">
-    <div className="w-[246px] h-8 py-1 flex items-center gap-2 opacity-100">
+    <div className="w-[352px] h-8 py-1 flex items-center gap-2 opacity-100">
       <span className="w-6 h-6 flex items-center justify-center opacity-100">
         <RiFlashlightLine size={24} />
       </span>
@@ -174,102 +174,35 @@ function DashboardGrid() {
   <div className="border border-[#E1E4EA] bg-[#FFFFFF] mb-4"></div>
 
   {/* Actions wrapper — grows to fill leftover height, spreads rows evenly */}
-  <div className="w-full flex-1 flex flex-col justify-between">
+  <div className="w-[320px]  flex flex-col justify-center gap-0.5">
 
     {/* Action 1 */}
-    <div className="w-full flex items-center justify-between rounded-xl py-3">
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center">
-          <RiHomeSmileFill className="text-green-600 text-2xl" />
+    <div className="w-[320px] flex items-center gap-3 pt-2 pb-2">
+      
+        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+          <RiHomeSmileFill className="text-green-600 " />
         </div>
-        <div>
-          <h3 className="font-bold text-[16px] leading-[22px] tracking-[-0.6%] text-[#0E121B]">
+        <div className="w-[161px] h-10 gap-1 flex flex-col ">
+          <h3 className="font-bold text-[14px] leading-[20px] tracking-[-0.6%] text-[#0E121B]">
             Rent Payment
           </h3>
-          <p className="text-[#525866] font-medium leading-[18px] text-[14px]">
+          <p className="text-[#525866] font-medium leading-[16px] text-[14px]">
             Monthly rent payment.
           </p>
         </div>
-      </div>
-      <div className="flex items-center gap-4">
+      
+      <div className="flex items-center gap-0.5 w-[63px] h-4 border-t-[1px] border-l-[1px]border-r-[1px] border-[#E1E4EA] rounded-full pt-0.5 pr-2 pl-2 pb-0.5 ml-3">
         <span className="py-1 px-3 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full text-[15px]">
           $940.00
         </span>
+         <div className="w-5 h-5 p-[1px] gap-0.5 ml-3">
         <FiChevronRight className="text-gray-500 text-lg" />
+        </div>
       </div>
+     
     </div>
 
-    {/* Action 2 */}
-    <div className="w-full flex items-center justify-between rounded-xl py-3">
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-cyan-100 flex items-center justify-center">
-          <PiStudent className="text-cyan-600 text-2xl" />
-        </div>
-        <div>
-          <h3 className="font-bold text-[16px] leading-[22px] tracking-[-0.6%] text-[#0E121B]">
-            Natalia's Tuition
-          </h3>
-          <p className="text-[#525866] font-medium leading-[18px] text-[14px]">
-            Nat's university fee.
-          </p>
-        </div>
-      </div>
-      <div className="flex items-center gap-4">
-        <span className="bg-[#F2F5F8] text-[#717784] py-1 px-3 font-medium rounded-full text-[15px]">
-          $750.00
-        </span>
-        <FiChevronRight className="text-gray-500 text-lg" />
-      </div>
-    </div>
-
-    {/* Action 3 */}
-    <div className="w-full flex items-center justify-between rounded-xl py-3">
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center">
-          <FaHandHoldingHeart className="text-pink-600 text-2xl" />
-        </div>
-        <div>
-          <h3 className="font-bold text-[16px] leading-[22px] tracking-[-0.6%] text-[#0E121B]">
-            Donation to TEMA
-          </h3>
-          <p className="text-[#525866] font-medium leading-[18px] text-[14px]">
-            In the name of our family.
-          </p>
-        </div>
-      </div>
-      <div className="flex items-center gap-4">
-        <span className="py-1 px-3 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full text-[15px]">
-          $100.00
-        </span>
-        <FiChevronRight className="text-gray-500 text-lg" />
-      </div>
-    </div>
-
-    {/* Action 4 */}
-    <div className="w-full flex items-center justify-between rounded-xl py-3">
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center">
-          <RiFireFill className="text-red-500 text-2xl"/>
-        </div>
-        <div>
-          <h3 className="font-bold text-[16px] leading-[22px] tracking-[-0.6%] text-[#0E121B]">
-            Gas Bill Payment
-          </h3>
-          <p className="text-[#525866] font-medium leading-[18px] text-[14px]">
-            Monthly gas bill payment.
-          </p>
-        </div>
-      </div>
-      <div className="flex items-center gap-4">
-        <span className="py-1 px-3 flex gap-0.5 text-[#717784] bg-[#F2F5F8] rounded-full text-[15px]">
-          $20.00
-        </span>
-        <FiChevronRight className="text-gray-500 text-lg" />
-      </div>
-    </div>
-
-  </div>
-  {/* end actions wrapper */}
+ </div>
 
   {/* Bottom Button */}
   <button className="w-full h-9 mt-4 bg-[#FFFFFF] border border-[#E1E4EA] rounded-lg p-2 flex items-center justify-center gap-1 opacity-100 transition hover:bg-[#F5F7FA]">
