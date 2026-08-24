@@ -32,7 +32,7 @@ function DashboardGrid() {
   </div>
 
   {/* Actual Card */}
-  <div className="relative h-[188px] w-full rounded-[20px] border border-gray-200 bg-white p-6 overflow-hidden">
+  <div className="relative h-[188px] w-[320px] rounded-4 border border-gray-200 bg-white p-6 overflow-hidden">
 
     {/* Decorative lines */}
     {/* <div className="absolute right-[-20px] top-[-30px] h-[180px] w-[180px] rounded-[40px] border border-gray-200 rotate-[35deg]"></div> */}
