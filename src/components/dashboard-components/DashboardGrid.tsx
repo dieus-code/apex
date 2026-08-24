@@ -47,8 +47,8 @@ function DashboardGrid() {
           </button>
         </div>
 
-        {/* Actual Card */}
-        <div className="relative h-[188px] w-full rounded-[20px] border border-gray-200 bg-white p-4 overflow-hidden">
+  {/* Actual Card */}
+  <div className="relative h-[188px] w-[320px] rounded-4 border border-gray-200 bg-white p-6 overflow-hidden">
 
           {/* Top */}
           <div className="flex items-center justify-between">
