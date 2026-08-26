@@ -48,7 +48,7 @@ function DashboardGrid() {
         </div>
 
   {/* Actual Card */}
-  <div className="relative h-[188px] w-[320px] rounded-4 border border-gray-200 bg-white p-6 overflow-hidden">
+  <div className=" h-[188px] w-[320px] rounded-2xl border border-gray-200 bg-white p-6 overflow-hidden">
 
           {/* Top */}
           <div className="flex items-center justify-between">
@@ -113,7 +113,7 @@ function DashboardGrid() {
         </div>
 
         {/* Tabs */}
-        <div className="grid grid-cols-3 w-full mt-4 border border-[#E1E4EA] rounded-xl overflow-hidden">
+        <div className="grid grid-cols-3 w-full h-6 mt-5 rounded-[6px] border border-[#E1E4EA] rounded-4 overflow-hidden">
 
           <button className="py-1 px-3 border-r border-[#E1E4EA] bg-white">
             <p className="text-[12px] leading-4 font-medium text-[#525866]">
@@ -136,7 +136,7 @@ function DashboardGrid() {
         </div>
 
         {/* Spending Limit */}
-        <div className="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-between mt-3 ">
 
           <div className="flex items-center gap-4">
 
@@ -350,14 +350,14 @@ function DashboardGrid() {
           <div className="flex items-center gap-3">
             <FiPieChart className="h-6 w-6 text-gray-700" />
 
-            <h2 className="text-[16px] leading-6 font-medium text-[#0E121B]">
+            <h2 className="text-[14px] leading-6 font-medium text-[#0E121B]">
               Spending Summary
             </h2>
           </div>
 
-          <button className="border rounded-full py-1.5 px-2 pl-3 gap-1 bg-white border-[#E1E4EA] flex items-center h-8 w-[106px]">
+          <button className="border rounded-full py-1.5 px-2 pl-3 gap-1 bg-white border-[#E1E4EA] flex items-center h-8 w-[120px]">
 
-            <span className="text-[14px] leading-5 text-[#0E121B]">
+            <span className="flex text-[14px] leading-5 text-[#0E121B]">
               Last Week
             </span>
 
@@ -369,7 +369,7 @@ function DashboardGrid() {
 
 
         {/* Gauge */}
-        <div className="pt-4 border-b border-[#E1E4EA]">
+        <div className="pt-4 h-[150px] w-[250px] ml-8 border-b border-[#E1E4EA]">
 
           <GaugeComponent
             type="semicircle"
