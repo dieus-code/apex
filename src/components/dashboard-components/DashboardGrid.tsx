@@ -1,6 +1,7 @@
 import DashboardCard from "./DashboardCard";
 import { AiOutlineCreditCard } from "react-icons/ai";
 import logo from "../../assets/logo.png";
+import mastercard from "../../assets/Mastercard.png";
 import { FiPlus, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import GaugeComponent from "react-gauge-component";
 import { PiStudent } from "react-icons/pi";
@@ -58,10 +59,10 @@ function DashboardGrid() {
               <img
                 src={logo}
                 alt="Apex logo"
-                className="w-10 h-10 object-contain"
+                className="w-9 h-9 object-contain"
               />
 
-              <span className="w-5 h-5 text-[#99A0AE] rotate-90">
+              <span className="w-5 h-7 text-[#99A0AE] rotate-90">
                 <IoWifiSharp />
               </span>
 
@@ -78,8 +79,11 @@ function DashboardGrid() {
 
             {/* Mastercard */}
             <div className="flex items-center">
-              <span className="w-[17px] h-[17px] rounded-full bg-[#E80B26]" />
-              <span className="w-[17px] h-[17px] rounded-full bg-[#F59D31] -ml-2 mix-blend-multiply" />
+              <img
+                src={mastercard}
+                alt="Mastercard image"
+                className="w-9 h-9 object-contain"
+              />
             </div>
 
           </div>
