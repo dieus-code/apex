@@ -14,7 +14,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/verify-email" element={<EmailVerificationPage />} />
         <Route path="/dashboard" element={<Dashboard/>} />
-        
+        <Route path="/test" element={<Dashboard/>} />
       </Routes>
   );
 }
