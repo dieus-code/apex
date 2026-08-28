@@ -21,10 +21,11 @@ import {
   RiFlashlightLine,
 } from "react-icons/ri";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import avaterGirl from "../../assets/Avaatar-girl.png";
 
 function DashboardGrid() {
   return (
-    <div className="grid grid-cols-[352px_352px_352px] gap-4 ml-4">
+    <div className="grid grid-cols-[420px_420px_420px] gap-9 ml-4">
 
       {/* ==================== MY CARD ==================== */}
       <DashboardCard>
@@ -49,7 +50,7 @@ function DashboardGrid() {
         </div>
 
   {/* Actual Card */}
-  <div className=" h-[188px] w-[320px] rounded-2xl border border-gray-200 bg-white p-6 overflow-hidden">
+  <div className=" h-[188px] w-full rounded-2xl border border-gray-200 bg-white p-6 overflow-hidden">
 
           {/* Top */}
           <div className="flex items-center justify-between">
@@ -89,7 +90,7 @@ function DashboardGrid() {
           </div>
 
           {/* Bottom */}
-          <div className="mt-6">
+          <div className="mt-10">
 
             <p className="text-[14px] leading-5 text-[#525866]">
               Savings Card
@@ -101,7 +102,7 @@ function DashboardGrid() {
                 $16,058.94
               </h1>
 
-              <div className="flex">
+              <div className="flex mt-2">
                 <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-l-xl bg-white">
                   <FiChevronLeft className="text-[#0E121B]" />
                 </button>
@@ -174,7 +175,7 @@ function DashboardGrid() {
 
 
       {/* ==================== SAVED ACTIONS ==================== */}
-      <DashboardCard className="flex flex-col">
+      <DashboardCard>
 
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
@@ -238,7 +239,7 @@ function DashboardGrid() {
             <div className="flex items-center gap-3">
 
               <div className="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center shrink-0">
-                <PiStudent className="text-cyan-600 text-2xl" />
+                <img src={avaterGirl} alt="Avatar" className="text-cyan-600 text-2xl" />
               </div>
 
               <div>
@@ -373,7 +374,7 @@ function DashboardGrid() {
 
 
         {/* Gauge */}
-        <div className="pt-4 h-[150px] w-[250px] ml-8 border-b border-[#E1E4EA]">
+        <div className="pt-4 h-[145px] w-[300px] ml-11 border-b border-[#E1E4EA]">
 
           <GaugeComponent
             type="semicircle"
@@ -385,8 +386,7 @@ function DashboardGrid() {
                 formatTextValue: () => "$1,800.00",
                 style: {
                   fontSize: "36px",
-                  fill: "#111827",
-                  fontWeight: "700",
+                  fill: "#111827"
                 },
               },
 
