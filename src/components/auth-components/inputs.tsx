@@ -200,7 +200,7 @@ export function LoginInputs(){
               </Link>
           </div>
 
-     <Button type="submit">Login</Button>
+     <Link to="/dashboard"><Button >Login</Button></Link>
     </form>
     </>
        );
