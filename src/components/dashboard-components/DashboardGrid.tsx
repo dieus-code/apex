@@ -11,12 +11,17 @@ import { IoWifiSharp } from "react-icons/io5";
 import { TiTickOutline } from "react-icons/ti";
 import { RiHomeSmileFill, RiFireFill ,RiFlashlightLine } from "react-icons/ri";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import avaterGirl from "../../assets/Avaatar-girl.png";
 
 function DashboardGrid() {
   return (
+<<<<<<< HEAD
     <div className="grid grid-cols-3 gap-6 ml-[32px] w-full">
       {/* My Card */}
 <DashboardCard className="min-h-65">
+=======
+    <div className="grid grid-cols-[420px_420px_420px] gap-9 ml-4">
+>>>>>>> b890f1632c482df9599b63e5187a814974309ccc
 
   {/* My Cards Header */}
   <div className="flex items-center justify-between mb-5">
@@ -32,7 +37,11 @@ function DashboardGrid() {
   </div>
 
   {/* Actual Card */}
+<<<<<<< HEAD
   <div className="relative h-[188px] w-[320px] rounded-4 border border-gray-200 bg-white p-6 overflow-hidden">
+=======
+  <div className=" h-[188px] w-full rounded-2xl border border-gray-200 bg-white p-6 overflow-hidden">
+>>>>>>> b890f1632c482df9599b63e5187a814974309ccc
 
     {/* Decorative lines */}
     {/* <div className="absolute right-[-20px] top-[-30px] h-[180px] w-[180px] rounded-[40px] border border-gray-200 rotate-[35deg]"></div> */}
@@ -55,10 +64,273 @@ function DashboardGrid() {
           <IoWifiSharp />
         </span>
 
+<<<<<<< HEAD
         {/* Active button */}
         <button className="flex items-center gap-[4px] rounded-full border pt-[4px] pl-[4px] pb-[4px] pr-[4px] w-[69px] t-[24px] h-[24px] l-[100px] bg-[#FFFFFF] border-[#E1E4EA]">
           <span className="flex items-center justify-center w-[12px] h-[12px] t-[2px] l-[2px] rounded-full bg-green-500 text-white">
             <TiTickOutline />
+=======
+                <span className="text-[10px] text-[#525866]">
+                  Active
+                </span>
+              </button>
+            </div>
+
+            {/* Mastercard */}
+            <div className="flex items-center">
+              <span className="w-[17px] h-[17px] rounded-full bg-[#E80B26]" />
+              <span className="w-[17px] h-[17px] rounded-full bg-[#F59D31] -ml-2 mix-blend-multiply" />
+            </div>
+
+          </div>
+
+          {/* Bottom */}
+          <div className="mt-10">
+
+            <p className="text-[14px] leading-5 text-[#525866]">
+              Savings Card
+            </p>
+
+            <div className="flex items-end justify-between">
+
+              <h1 className="text-[28px] leading-9 font-medium text-[#0E121B] mt-1">
+                $16,058.94
+              </h1>
+
+              <div className="flex mt-2">
+                <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-l-xl bg-white">
+                  <FiChevronLeft className="text-[#0E121B]" />
+                </button>
+
+                <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-r-xl bg-white">
+                  <FiChevronRight className="text-[#0E121B]" />
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* Tabs */}
+        <div className="grid grid-cols-3 w-full h-6 mt-5 rounded-[6px] border border-[#E1E4EA] rounded-4 overflow-hidden">
+
+          <button className="py-1 px-3 border-r border-[#E1E4EA] bg-white">
+            <p className="text-[12px] leading-4 font-medium text-[#525866]">
+              Daily
+            </p>
+          </button>
+
+          <button className="py-1 px-3 border-r border-[#E1E4EA] bg-[#F5F7FA]">
+            <p className="text-[12px] leading-4 font-medium text-[#0E121B]">
+              Weekly
+            </p>
+          </button>
+
+          <button className="py-1 px-3 bg-white">
+            <p className="text-[12px] leading-4 font-medium text-[#525866]">
+              Monthly
+            </p>
+          </button>
+
+        </div>
+
+        {/* Spending Limit */}
+        <div className="flex items-center justify-between mt-3 ">
+
+          <div className="flex items-center gap-4">
+
+            <div className="w-14 h-14 rounded-full border-[7px] border-gray-300 border-r-blue-600 border-t-blue-600 shrink-0" />
+
+            <div>
+              <p className="text-[14px] leading-5 text-[#525866]">
+                Spending Limit
+              </p>
+
+              <div className="flex items-center">
+                <span className="text-[18px] leading-6 font-medium text-[#0E121B]">
+                  $1,500.00
+                </span>
+
+                <span className="text-[12px] leading-4 font-medium text-[#99A0AE] ml-1">
+                  /week
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-md bg-white hover:bg-gray-100">
+            <FiChevronRight className="text-[#525866]" />
+          </button>
+
+        </div>
+
+      </DashboardCard>
+
+
+      {/* ==================== SAVED ACTIONS ==================== */}
+      <DashboardCard>
+
+        {/* Header */}
+        <div className="flex items-center justify-between mb-4">
+
+          <div className="flex items-center gap-2">
+            <RiFlashlightLine className="w-6 h-6" />
+
+            <h2 className="text-[16px] leading-6 font-medium text-[#0E121B]">
+              Saved Actions
+            </h2>
+          </div>
+
+          <button className="h-8 px-3 rounded-lg border border-[#E1E4EA] bg-white flex items-center justify-center shadow-sm">
+            <span className="text-[14px] leading-5 font-medium text-[#525866]">
+              See All
+            </span>
+          </button>
+
+        </div>
+
+        <div className="border-t border-[#E1E4EA]" />
+
+        {/* Actions */}
+        <div className="flex-1 flex flex-col justify-between">
+
+          {/* Action 1 */}
+          <div className="flex items-center justify-between py-2">
+
+            <div className="flex items-center gap-3">
+
+              <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                <RiHomeSmileFill className="text-green-600 text-2xl" />
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[14px] leading-5 text-[#0E121B]">
+                  Rent Payment
+                </h3>
+
+                <p className="text-[#525866] text-[12px] leading-[18px] font-medium">
+                  Monthly rent payment.
+                </p>
+              </div>
+
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="py-1 px-2 text-[#717784] bg-[#F2F5F8] rounded-full text-[13px]">
+                $940.00
+              </span>
+
+              <FiChevronRight className="text-gray-500 text-lg" />
+            </div>
+
+          </div>
+
+
+          {/* Action 2 */}
+          <div className="flex items-center justify-between py-2">
+
+            <div className="flex items-center gap-3">
+
+              <div className="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center shrink-0">
+                <img src={avaterGirl} alt="Avatar" className="text-cyan-600 text-2xl" />
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[14px] leading-5 text-[#0E121B]">
+                  Natalia's Tuition
+                </h3>
+
+                <p className="text-[#525866] text-[12px] leading-[18px] font-medium">
+                  Nat's university fee.
+                </p>
+              </div>
+
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="py-1 px-2 text-[#717784] bg-[#F2F5F8] rounded-full text-[13px]">
+                $750.00
+              </span>
+
+              <FiChevronRight className="text-gray-500 text-lg" />
+            </div>
+
+          </div>
+
+
+          {/* Action 3 */}
+          <div className="flex items-center justify-between py-2">
+
+            <div className="flex items-center gap-3">
+
+              <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center shrink-0">
+                <FaHandHoldingHeart className="text-pink-600 text-2xl" />
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[14px] leading-5 text-[#0E121B]">
+                  Donation to TEMA
+                </h3>
+
+                <p className="text-[#525866] text-[12px] leading-[18px] font-medium">
+                  In the name of our family.
+                </p>
+              </div>
+
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="py-1 px-2 text-[#717784] bg-[#F2F5F8] rounded-full text-[13px]">
+                $100.00
+              </span>
+
+              <FiChevronRight className="text-gray-500 text-lg" />
+            </div>
+
+          </div>
+
+
+          {/* Action 4 */}
+          <div className="flex items-center justify-between py-2">
+
+            <div className="flex items-center gap-3">
+
+              <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center shrink-0">
+                <RiFireFill className="text-red-500 text-2xl" />
+              </div>
+
+              <div>
+                <h3 className="font-bold text-[14px] leading-5 text-[#0E121B]">
+                  Gas Bill Payment
+                </h3>
+
+                <p className="text-[#525866] text-[12px] leading-[18px] font-medium">
+                  Monthly gas bill payment.
+                </p>
+              </div>
+
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="py-1 px-2 text-[#717784] bg-[#F2F5F8] rounded-full text-[13px]">
+                $20.00
+              </span>
+
+              <FiChevronRight className="text-gray-500 text-lg" />
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Bottom Button */}
+        <button className="w-full h-9 mt-4 bg-white border border-[#E1E4EA] rounded-lg flex items-center justify-center gap-1 hover:bg-[#F5F7FA] transition">
+
+          <span className="text-[#525866] text-[20px] leading-none">
+            +
+>>>>>>> b890f1632c482df9599b63e5187a814974309ccc
           </span>
           Active
         </button>
@@ -98,10 +370,29 @@ function DashboardGrid() {
       </div>
     </div>
 
+<<<<<<< HEAD
   </div>
 
   {/* Tabs */}
   <div className="grid grid-cols-3 border bg-[#FFFFFF] rounded-[6px] w-[full] border-[#E1E4EA] rounded-xl overflow-hidden mt-[16px]">
+=======
+        {/* Gauge */}
+        <div className="pt-4 h-[145px] w-[300px] ml-11 border-b border-[#E1E4EA]">
+
+          <GaugeComponent
+            type="semicircle"
+            value={1800}
+            minValue={0}
+            maxValue={2000}
+            labels={{
+              valueLabel: {
+                formatTextValue: () => "$1,800.00",
+                style: {
+                  fontSize: "36px",
+                  fill: "#111827"
+                },
+              },
+>>>>>>> b890f1632c482df9599b63e5187a814974309ccc
 
     <button className="pt-[4px] pr-[12px] pb-[4px] pl-[12px] gap-[4px] bg-[#FFFFFF] border-[#E1E4EA] text-[16px] border-r">
       <p className="text-[12px] leading-[16px] tracking-[0%] font-medium text-[#525866] align-middle items-center">Daily</p>
