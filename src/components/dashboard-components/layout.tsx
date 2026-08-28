@@ -15,10 +15,10 @@ function Layout({
         
             <div className="flex h-screen overflow-hidden">
                 <SideBar/>
-            <main className=" flex-1 ">
+            <main className=" flex-1 overflow-y-auto">
                 {children}
             </main>   
-        </div>
+        </div>SUPPORT
         
     );    
 }
