@@ -6,7 +6,7 @@ import sophia from "../../assets/sophia.png";
 
 function TransactionTable() {
   return (
-    <div className="mt-6 h-[332px] w-[1104px] overflow-hidden">
+    <div className="mt-6 h-[332px] w-full overflow-hidden">
       <TransactionHeader />
 
       <TransactionLabels />

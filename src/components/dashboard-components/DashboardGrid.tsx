@@ -1,6 +1,9 @@
 import DashboardCard from "./DashboardCard";
 import { AiOutlineCreditCard } from "react-icons/ai";
 import logo from "../../assets/logo.png";
+import mastercard from "../../assets/Mastercard.png";
+import vector from "../../assets/Vector.png";
+import vector1 from "../../assets/Vector1.png";
 import { FiPlus, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import GaugeComponent from "react-gauge-component";
 import { PiStudent } from "react-icons/pi";
@@ -20,10 +23,11 @@ import {
   RiFlashlightLine,
 } from "react-icons/ri";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import avaterGirl from "../../assets/Avaatar-girl.png";
 
 function DashboardGrid() {
   return (
-    <div className="grid grid-cols-[352px_352px_352px] gap-4 ml-4">
+    <div className="grid grid-cols-[420px_420px_420px] gap-9 ml-4">
 
       {/* ==================== MY CARD ==================== */}
       <DashboardCard>
@@ -46,74 +50,94 @@ function DashboardGrid() {
             </span>
           </button>
         </div>
+{/* Actual Card */}
+<div className="relative h-[188px] w-full rounded-2xl border border-gray-200 bg-white p-6 overflow-hidden">
+  
+ {/* Vector Background Wrapper */}
+<div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
 
-  {/* Actual Card */}
-  <div className="relative h-[188px] w-[320px] rounded-4 border border-gray-200 bg-white p-6 overflow-hidden">
+  {/* Vector 1 Wrapper */}
+  <div className="absolute top-0 right-0 w-[116px] h-[99px]">
+    <img
+      src={vector}
+      alt="Card background design main"
+      className="w-full h-full object-contain object-top-right"
+    />
+  </div>
 
-          {/* Top */}
-          <div className="flex items-center justify-between">
+  {/* Vector 2 Wrapper */}
+  <div className="absolute top-0 right-0 w-[96px] h-[150px]">
+    <img
+      src={vector1}
+      alt="Card background design secondary"
+      className="w-full h-full object-contain object-top-right"
+    />
+  </div>
 
-            <div className="flex items-center gap-3">
+</div>
+  {/* Content Layer */}
+  <div className="relative z-10 flex flex-col justify-between h-full">
+    
+    {/* Top Bar */}
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-3">
+        <img
+          src={logo}
+          alt="Apex logo"
+          className="w-9 h-9 object-contain"
+        />
 
-              <img
-                src={logo}
-                alt="Apex logo"
-                className="w-10 h-10 object-contain"
-              />
+        <span className="w-5 h-7 text-[#99A0AE] rotate-90 flex items-center justify-center">
+          <IoWifiSharp />
+        </span>
 
-              <span className="w-5 h-5 text-[#99A0AE] rotate-90">
-                <IoWifiSharp />
-              </span>
+        <button className="flex items-center gap-1 rounded-full border px-2 py-0.5 bg-white border-[#E1E4EA]">
+          <span className="flex items-center justify-center w-3 h-3 rounded-full bg-green-500 text-white">
+            <TiTickOutline className="text-[10px]" />
+          </span>
 
-              <button className="flex items-center gap-1 rounded-full border p-1 w-[69px] h-6 bg-white border-[#E1E4EA]">
-                <span className="flex items-center justify-center w-3 h-3 rounded-full bg-green-500 text-white">
-                  <TiTickOutline />
-                </span>
+          <span className="text-[10px] text-[#525866]">
+            Active
+          </span>
+        </button>
+      </div>
 
-                <span className="text-[10px] text-[#525866]">
-                  Active
-                </span>
-              </button>
-            </div>
+      {/* Mastercard Logo */}
+      <img
+        src={mastercard}
+        alt="Mastercard logo"
+        className="w-9 h-9 object-contain"
+      />
+    </div>
 
-            {/* Mastercard */}
-            <div className="flex items-center">
-              <span className="w-[17px] h-[17px] rounded-full bg-[#E80B26]" />
-              <span className="w-[17px] h-[17px] rounded-full bg-[#F59D31] -ml-2 mix-blend-multiply" />
-            </div>
+    {/* Bottom Bar */}
+    <div>
+      <p className="text-[14px] leading-5 text-[#525866]">
+        Savings Card
+      </p>
 
-          </div>
+      <div className="flex items-end justify-between">
+        <h1 className="text-[28px] leading-9 font-medium text-[#0E121B] mt-1">
+          $16,058.94
+        </h1>
 
-          {/* Bottom */}
-          <div className="mt-6">
+        <div className="flex">
+          <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-l-xl bg-white">
+            <FiChevronLeft className="text-[#0E121B]" />
+          </button>
 
-            <p className="text-[14px] leading-5 text-[#525866]">
-              Savings Card
-            </p>
-
-            <div className="flex items-end justify-between">
-
-              <h1 className="text-[28px] leading-9 font-medium text-[#0E121B] mt-1">
-                $16,058.94
-              </h1>
-
-              <div className="flex">
-                <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-l-xl bg-white">
-                  <FiChevronLeft className="text-[#0E121B]" />
-                </button>
-
-                <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-r-xl bg-white">
-                  <FiChevronRight className="text-[#0E121B]" />
-                </button>
-              </div>
-
-            </div>
-          </div>
-
+          <button className="flex items-center justify-center w-6 h-6 border border-l-0 border-[#E1E4EA] rounded-r-xl bg-white">
+            <FiChevronRight className="text-[#0E121B]" />
+          </button>
         </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
         {/* Tabs */}
-        <div className="grid grid-cols-3 w-full mt-4 border border-[#E1E4EA] rounded-xl overflow-hidden">
+        <div className="grid grid-cols-3 w-full h-6 mt-5 rounded-[6px] border border-[#E1E4EA] rounded-4 overflow-hidden">
 
           <button className="py-1 px-3 border-r border-[#E1E4EA] bg-white">
             <p className="text-[12px] leading-4 font-medium text-[#525866]">
@@ -136,7 +160,7 @@ function DashboardGrid() {
         </div>
 
         {/* Spending Limit */}
-        <div className="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-between mt-3 ">
 
           <div className="flex items-center gap-4">
 
@@ -170,7 +194,7 @@ function DashboardGrid() {
 
 
       {/* ==================== SAVED ACTIONS ==================== */}
-      <DashboardCard className="flex flex-col">
+      <DashboardCard>
 
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
@@ -234,7 +258,7 @@ function DashboardGrid() {
             <div className="flex items-center gap-3">
 
               <div className="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center shrink-0">
-                <PiStudent className="text-cyan-600 text-2xl" />
+                <img src={avaterGirl} alt="Avatar" className="text-cyan-600 text-2xl" />
               </div>
 
               <div>
@@ -350,14 +374,14 @@ function DashboardGrid() {
           <div className="flex items-center gap-3">
             <FiPieChart className="h-6 w-6 text-gray-700" />
 
-            <h2 className="text-[16px] leading-6 font-medium text-[#0E121B]">
+            <h2 className="text-[14px] leading-6 font-medium text-[#0E121B]">
               Spending Summary
             </h2>
           </div>
 
-          <button className="border rounded-full py-1.5 px-2 pl-3 gap-1 bg-white border-[#E1E4EA] flex items-center h-8 w-[106px]">
+          <button className="border rounded-full py-1.5 px-2 pl-3 gap-1 bg-white border-[#E1E4EA] flex items-center h-8 w-[120px]">
 
-            <span className="text-[14px] leading-5 text-[#0E121B]">
+            <span className="flex text-[14px] leading-5 text-[#0E121B]">
               Last Week
             </span>
 
@@ -369,7 +393,7 @@ function DashboardGrid() {
 
 
         {/* Gauge */}
-        <div className="pt-4 border-b border-[#E1E4EA]">
+        <div className="pt-4 h-[145px] w-[300px] ml-11 border-b border-[#E1E4EA]">
 
           <GaugeComponent
             type="semicircle"
@@ -381,8 +405,7 @@ function DashboardGrid() {
                 formatTextValue: () => "$1,800.00",
                 style: {
                   fontSize: "36px",
-                  fill: "#111827",
-                  fontWeight: "700",
+                  fill: "#111827"
                 },
               },
 
