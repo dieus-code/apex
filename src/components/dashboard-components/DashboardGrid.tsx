@@ -2,6 +2,8 @@ import DashboardCard from "./DashboardCard";
 import { AiOutlineCreditCard } from "react-icons/ai";
 import logo from "../../assets/logo.png";
 import mastercard from "../../assets/Mastercard.png";
+import vector from "../../assets/Vector.png";
+import vector1 from "../../assets/Vector1.png";
 import { FiPlus, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import GaugeComponent from "react-gauge-component";
 import { PiStudent } from "react-icons/pi";
@@ -48,74 +50,91 @@ function DashboardGrid() {
             </span>
           </button>
         </div>
+{/* Actual Card */}
+<div className="relative h-[188px] w-full rounded-2xl border border-gray-200 bg-white p-6 overflow-hidden">
+  
+ {/* Vector Background Wrapper */}
+<div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
 
-  {/* Actual Card */}
-  <div className=" h-[188px] w-full rounded-2xl border border-gray-200 bg-white p-6 overflow-hidden">
+  {/* Vector 1 Wrapper */}
+  <div className="absolute top-0 right-0 w-[116px] h-[99px]">
+    <img
+      src={vector}
+      alt="Card background design main"
+      className="w-full h-full object-contain object-top-right"
+    />
+  </div>
 
-          {/* Top */}
-          <div className="flex items-center justify-between">
+  {/* Vector 2 Wrapper */}
+  <div className="absolute top-0 right-0 w-[96px] h-[150px]">
+    <img
+      src={vector1}
+      alt="Card background design secondary"
+      className="w-full h-full object-contain object-top-right"
+    />
+  </div>
 
-            <div className="flex items-center gap-3">
+</div>
+  {/* Content Layer */}
+  <div className="relative z-10 flex flex-col justify-between h-full">
+    
+    {/* Top Bar */}
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-3">
+        <img
+          src={logo}
+          alt="Apex logo"
+          className="w-9 h-9 object-contain"
+        />
 
-              <img
-                src={logo}
-                alt="Apex logo"
-                className="w-9 h-9 object-contain"
-              />
+        <span className="w-5 h-7 text-[#99A0AE] rotate-90 flex items-center justify-center">
+          <IoWifiSharp />
+        </span>
 
-              <span className="w-5 h-7 text-[#99A0AE] rotate-90">
-                <IoWifiSharp />
-              </span>
+        <button className="flex items-center gap-1 rounded-full border px-2 py-0.5 bg-white border-[#E1E4EA]">
+          <span className="flex items-center justify-center w-3 h-3 rounded-full bg-green-500 text-white">
+            <TiTickOutline className="text-[10px]" />
+          </span>
 
-              <button className="flex items-center gap-1 rounded-full border p-1 w-[69px] h-6 bg-white border-[#E1E4EA]">
-                <span className="flex items-center justify-center w-3 h-3 rounded-full bg-green-500 text-white">
-                  <TiTickOutline />
-                </span>
+          <span className="text-[10px] text-[#525866]">
+            Active
+          </span>
+        </button>
+      </div>
 
-                <span className="text-[10px] text-[#525866]">
-                  Active
-                </span>
-              </button>
-            </div>
+      {/* Mastercard Logo */}
+      <img
+        src={mastercard}
+        alt="Mastercard logo"
+        className="w-9 h-9 object-contain"
+      />
+    </div>
 
-            {/* Mastercard */}
-            <div className="flex items-center">
-              <img
-                src={mastercard}
-                alt="Mastercard image"
-                className="w-9 h-9 object-contain"
-              />
-            </div>
+    {/* Bottom Bar */}
+    <div>
+      <p className="text-[14px] leading-5 text-[#525866]">
+        Savings Card
+      </p>
 
-          </div>
+      <div className="flex items-end justify-between">
+        <h1 className="text-[28px] leading-9 font-medium text-[#0E121B] mt-1">
+          $16,058.94
+        </h1>
 
-          {/* Bottom */}
-          <div className="mt-10">
+        <div className="flex">
+          <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-l-xl bg-white">
+            <FiChevronLeft className="text-[#0E121B]" />
+          </button>
 
-            <p className="text-[14px] leading-5 text-[#525866]">
-              Savings Card
-            </p>
-
-            <div className="flex items-end justify-between">
-
-              <h1 className="text-[28px] leading-9 font-medium text-[#0E121B] mt-1">
-                $16,058.94
-              </h1>
-
-              <div className="flex mt-2">
-                <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-l-xl bg-white">
-                  <FiChevronLeft className="text-[#0E121B]" />
-                </button>
-
-                <button className="flex items-center justify-center w-6 h-6 border border-[#E1E4EA] rounded-r-xl bg-white">
-                  <FiChevronRight className="text-[#0E121B]" />
-                </button>
-              </div>
-
-            </div>
-          </div>
-
+          <button className="flex items-center justify-center w-6 h-6 border border-l-0 border-[#E1E4EA] rounded-r-xl bg-white">
+            <FiChevronRight className="text-[#0E121B]" />
+          </button>
         </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
         {/* Tabs */}
         <div className="grid grid-cols-3 w-full h-6 mt-5 rounded-[6px] border border-[#E1E4EA] rounded-4 overflow-hidden">

@@ -18,7 +18,7 @@ function Layout({
             <main className=" flex-1 overflow-y-auto">
                 {children}
             </main>   
-        </div>SUPPORT
+        </div>
         
     );    
 }
