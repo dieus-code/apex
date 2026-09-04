@@ -11,7 +11,7 @@ function DashboardCard({
 }: DashboardCardProps) {
   return (
     <div
-      className={`rounded-xl border border-gray-200 bg-white p-4 gap-4 shadow-sm h-[385px] w-full ${className}`}
+      className={`flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm min-h-[385px] h-auto w-full min-w-0 ${className}`}
     >
       {children}
     </div>
