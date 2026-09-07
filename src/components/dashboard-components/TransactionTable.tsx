@@ -5,13 +5,18 @@ import james from "../../assets/james.png";
 import sophia from "../../assets/sophia.png";
 
 function TransactionTable() {
-  return (
-    <div className="mt-6 h-[332px] w-full overflow-hidden">
+ return (
+    <div className="mt-6 w-full min-h-[332px] flex flex-col">
+      {/* Header section */}
       <TransactionHeader />
 
-      <TransactionLabels />
+      {/* Responsive scrollable container */}
+      <div className="w-full overflow-x-auto overflow-y-auto max-h-[380px] rounded-lg border border-[#E1E4EA] bg-white [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {/* Enforce a minimum width so columns don't collapse on mobile */}
+        <div className="min-w-[600px] w-full">
+          <TransactionLabels />
 
-      <div>
+          <div className="divide-y divide-[#E1E4EA]">
         <TransactionRow
           type="investment"
           name="Investment Return"
@@ -58,6 +63,8 @@ function TransactionTable() {
           date="12 September"
           method="ACH"
         />
+        </div>
+        </div>
       </div>
     </div>
   );

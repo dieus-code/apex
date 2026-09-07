@@ -2,7 +2,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 function TransactionHeader() {
   return (
-    <div className="flex h-[76px] w-full items-start justify-between px-6 py-5">
+    <div className="flex flex-col md:flex-row min-h-[76px] md:h-[76px] w-full items-start md:items-center justify-between px-4 sm:px-6 py-4 md:py-5 gap-3 md:gap-0">
       {/* Left Side */}
       <div>
         <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ function TransactionHeader() {
 
         {/* Button */}
         <button className="h-9 rounded-lg border border-gray-200 px-4 text-sm font-medium text-slate-600 hover:bg-gray-50">
-          See All
+          See all
         </button>
       </div>
     </div>
